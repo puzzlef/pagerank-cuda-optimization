@@ -187,7 +187,7 @@ int pagerankCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD, const T 
 // @param o options {damping=0.85, tolerance=1e-6, maxIterations=500}
 // @returns {ranks, iterations, time}
 template <class G, class H, class T=float>
-PagerankResult<T> pagerankCuda(const H& xt, const vector<T> *q=nullptr, PagerankOptions<T> o=PagerankOptions<T>()) {
+PagerankResult<T> pagerankCuda(const G& x, const H& xt, const vector<T> *q=nullptr, PagerankOptions<T> o=PagerankOptions<T>()) {
   T    p   = o.damping;
   T    E   = o.tolerance;
   int  L   = o.maxIterations, l;
