@@ -15,6 +15,21 @@ using std::min;
 
 
 
+// PAGERANK HELPERS
+// ----------------
+
+template <class G, class H, class T>
+auto pagerankComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
+  auto cs = joinUntilSize(components(x, xt), o.minComponentSize);
+  auto fp = [&](int u) { return xt.degree(u) < SWITCH_DEGREE_PR; };
+  for (auto& ks : cs)
+    partition(ks.begin(), ks.end(), fp);
+  return cs;
+}
+
+
+
+
 // PAGERANK-FACTOR
 // ---------------
 
@@ -112,25 +127,28 @@ void pagerankSwitchedCu(T *a, const T *c, const int *vfrom, const int *efrom, in
   }
 }
 
-template <class G, class J>
-int pagerankSwitchPoint(const G& xt, J&& ks) {
+template <class H, class J>
+int pagerankSwitchPoint(const H& xt, J&& ks) {
   int a = countIf(ks, [&](int u) { return xt.degree(u) < SWITCH_DEGREE_PR; });
   int L = SWITCH_LIMIT_PR, N = ks.size();
   return a<L? 0 : (N-a<L? N : a);
 }
 
 void pagerankAddStep(vector<int>& a, int n) {
+  if (n == 0) return;
   if (a.empty() || sgn(a.back()) != sgn(n)) a.push_back(n);
   else a.back() += n;
 }
 
-template <class G, class J>
-auto pagerankWave(const G& xt, J&& ks) {
+template <class H>
+auto pagerankWave(const H& xt, const vector2d<int>& cs) {
   vector<int> a;
-  int N = ks.size();
-  int s = pagerankSwitchPoint(xt, ks);
-  if (s)   pagerankAddStep(a,  -s);
-  if (N-s) pagerankAddStep(a, N-s);
+  for (const auto& ks : cs) {
+    int N = ks.size();
+    int s = pagerankSwitchPoint(xt, ks);
+    pagerankAddStep(a,  -s);
+    pagerankAddStep(a, N-s);
+  }
   return a;
 }
 
@@ -168,20 +186,16 @@ int pagerankCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD, const T 
 // @param q initial ranks (optional)
 // @param o options {damping=0.85, tolerance=1e-6, maxIterations=500}
 // @returns {ranks, iterations, time}
-template <class H, class T=float>
+template <class G, class H, class T=float>
 PagerankResult<T> pagerankCuda(const H& xt, const vector<T> *q=nullptr, PagerankOptions<T> o=PagerankOptions<T>()) {
   T    p   = o.damping;
   T    E   = o.tolerance;
   int  L   = o.maxIterations, l;
   int  N   = xt.order();
   int  R   = reduceSizeCu(N);
-  auto fm  = [](int u) { return u; };
-  auto fp  = [&](auto ib, auto ie) {
-    partition(ib, ie, [&](int u) { return xt.degree(u) < SWITCH_DEGREE_PR; });
-  };
   auto cs    = pagerankComponents(x, xt, o);
-  auto ks    = vertices(xt, fm, fp);
-  auto ns    = pagerankWave(xt, ks);
+  auto ns    = pagerankWave(xt, cs);
+  auto ks    = join(cs);
   auto vfrom = sourceOffsets(xt, ks);
   auto efrom = destinationIndices(xt, ks);
   auto vdata = vertexData(xt, ks);
