@@ -42,15 +42,15 @@ using std::move;
 // OTHER CONFIG
 // ------------
 
-// For pagerank cuda switched
+// For pagerank cuda switched ()
 #define SWITCH_DEGREE_PR 64
 #define SWITCH_LIMIT_PR  32
+#define MIN_COMPUTE_SIZE_PR_SEQ 10
+#define MIN_COMPUTE_SIZE_PR     5000000
 
 // For levelwise pagerank
-#define MIN_COMPUTE_SIZE_PR 10
-
-// For levelwise pagerank cuda
-#define MIN_COMPUTE_SIZE_PRC 5000000
+#define MIN_COMPUTE_SIZE_PRL_SEQ 10
+#define MIN_COMPUTE_SIZE_PRL     5000000
 
 
 
@@ -60,14 +60,15 @@ using std::move;
 
 template <class T>
 struct PagerankOptions {
-  int repeat;
-  int minComponentSize;
-  T   damping;
-  T   tolerance;
-  int maxIterations;
+  int  repeat;
+  bool splitComponents;
+  bool sortComponents;
+  T    damping;
+  T    tolerance;
+  int  maxIterations;
 
-  PagerankOptions(int repeat=1, int minComponentSize=1, T damping=0.85, T tolerance=1e-6, int maxIterations=500) :
-  repeat(repeat), minComponentSize(minComponentSize), damping(damping), tolerance(tolerance), maxIterations(maxIterations) {}
+  PagerankOptions(int repeat=1, bool splitComponents=false, bool sortComponents=false, T damping=0.85, T tolerance=1e-6, int maxIterations=500) :
+  repeat(repeat), splitComponents(splitComponents), sortComponents(sortComponents), damping(damping), tolerance(tolerance), maxIterations(maxIterations) {}
 };
 
 

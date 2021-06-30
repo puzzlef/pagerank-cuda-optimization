@@ -20,8 +20,12 @@ using std::min;
 
 template <class G, class H, class T>
 auto pagerankComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
-  auto cs = joinUntilSize(components(x, xt), o.minComponentSize);
+  vector2d<int> cs;
   auto fp = [&](int u) { return xt.degree(u) < SWITCH_DEGREE_PR; };
+  if (o.sortComponents) cs = sortedComponents(x, xt);
+  else if (o.splitComponents) cs = components(x, xt);
+  else cs.push_back(vertices(xt));
+  cs = joinUntilSize(cs, MIN_COMPUTE_SIZE_PR);
   for (auto& ks : cs)
     partition(ks.begin(), ks.end(), fp);
   return cs;
