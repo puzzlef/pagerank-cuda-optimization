@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-src="pagerank-cuda-adjust-component-size"
+src="pagerank-cuda-adjust-compute-size"
 out="/home/resources/Documents/subhajit/$src.log"
 ulimit -s unlimited
 printf "" > "$out"

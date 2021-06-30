@@ -1,17 +1,10 @@
-Performance benefit of PageRank with vertices **split by components** ([pull], [CSR]).
+Comparing various **min. compute sizes** for **CUDA** based PageRank (pull, CSR).
 
-This experiment was for comparing performance between:
-1. Find pagerank **without optimization**.
-2. Find pagerank with vertices **split by components**.
-3. Find pagerank with components **sorted in topological order**.
-
-Each approach was attempted on a number of graphs, running each approach 5
-times to get a good time measure. On an few graphs, **splitting vertices by**
-**components** provides a **speedup**, but *sorting components in*
-*topological order* provides *no additional speedup*. For road networks, like
-`germany_osm` which only have *one component*, the speedup is possibly because
-of the *vertex reordering* caused by `dfs()` which is required for splitting
-by components.
+For this experiment, the vertices were **split by components**, and were
+joined together until they satisfied a **min. compute size**. Each joined
+component is then run through *pagerank compute call*. **Min. compute size**
+was varied from `1E+0` to `5E+7`, and pagerank was run 5 times to get a good
+time measure.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
@@ -21,28 +14,32 @@ the [SuiteSparse Matrix Collection].
 <br>
 
 ```bash
-$ g++ -O3 main.cxx
+$ nvcc -std=c++17 -Xcompiler -lnvgraph -O3 main.cu
 $ ./a.out ~/data/min-1DeadEnd.mtx
 $ ./a.out ~/data/min-2SCC.mtx
 $ ...
 
 # ...
 #
-# Loading graph /home/subhajit/data/web-Stanford.mtx ...
-# order: 281903 size: 2312497 {}
-# order: 281903 size: 2312497 {} (transposeWithDegree)
-# [00441.055 ms; 063 iters.] [0.0000e+00 err.] pagerankSeq
-# [00333.251 ms; 063 iters.] [0.0000e+00 err.] pagerankSeq [split]
-# [00331.664 ms; 063 iters.] [0.0000e+00 err.] pagerankSeq [split; sort]
-#
-# ...
-#
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# [11715.982 ms; 051 iters.] [0.0000e+00 err.] pagerankSeq
-# [11447.048 ms; 051 iters.] [4.5725e-09 err.] pagerankSeq [split]
-# [11474.953 ms; 051 iters.] [4.5754e-09 err.] pagerankSeq [split; sort]
+# [00168.072 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00355.320 ms; 051 iters.] [3.1464e-06 err.] pagerankCuda [min-compute-size=1]
+# [00359.799 ms; 051 iters.] [3.1664e-06 err.] pagerankCuda [min-compute-size=5]
+# [00370.237 ms; 051 iters.] [3.1290e-06 err.] pagerankCuda [min-compute-size=10]
+# [00213.362 ms; 051 iters.] [3.0922e-06 err.] pagerankCuda [min-compute-size=50]
+# [00194.312 ms; 051 iters.] [3.1552e-06 err.] pagerankCuda [min-compute-size=100]
+# [00190.662 ms; 051 iters.] [3.0660e-06 err.] pagerankCuda [min-compute-size=500]
+# [00184.615 ms; 051 iters.] [3.0706e-06 err.] pagerankCuda [min-compute-size=1000]
+# [00165.183 ms; 051 iters.] [3.1470e-06 err.] pagerankCuda [min-compute-size=5000]
+# [00165.696 ms; 051 iters.] [3.1430e-06 err.] pagerankCuda [min-compute-size=10000]
+# [00155.293 ms; 051 iters.] [3.2172e-06 err.] pagerankCuda [min-compute-size=50000]
+# [00152.922 ms; 051 iters.] [3.1857e-06 err.] pagerankCuda [min-compute-size=100000]
+# [00151.506 ms; 051 iters.] [3.1882e-06 err.] pagerankCuda [min-compute-size=500000]
+# [00151.525 ms; 051 iters.] [3.1615e-06 err.] pagerankCuda [min-compute-size=1000000]
+# [00151.800 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=5000000]
+# [00151.167 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=10000000]
 #
 # ...
 ```
@@ -69,5 +66,5 @@ $ ...
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[charts]: https://photos.app.goo.gl/HqQHJ2twRK7Ge1Xc6
-[sheets]: https://docs.google.com/spreadsheets/d/1YmY_KYo9cDe2YCuwTgiiT0fFnyPS9-WScDIO9n-zRSY/edit?usp=sharing
+[charts]: https://photos.app.goo.gl/uFFqJ9NFfe5uxSxx9
+[sheets]: https://docs.google.com/spreadsheets/d/1ZFnirMXPX7GFGwLaGKkbqu2f7KiTFPkvRYixq_mUDno/edit?usp=sharing
