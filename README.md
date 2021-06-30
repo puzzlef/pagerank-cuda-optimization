@@ -22,25 +22,23 @@ $ ...
 
 # ...
 #
+# Loading graph /home/subhajit/data/web-Stanford.mtx ...
+# order: 281903 size: 2312497 {}
+# order: 281903 size: 2312497 {} (transposeWithDegree)
+# [00011.391 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00011.144 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
+# [00010.209 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [split]
+# [00010.585 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [split; sort]
+#
+# ...
+#
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# [00168.072 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00355.320 ms; 051 iters.] [3.1464e-06 err.] pagerankCuda [min-compute-size=1]
-# [00359.799 ms; 051 iters.] [3.1664e-06 err.] pagerankCuda [min-compute-size=5]
-# [00370.237 ms; 051 iters.] [3.1290e-06 err.] pagerankCuda [min-compute-size=10]
-# [00213.362 ms; 051 iters.] [3.0922e-06 err.] pagerankCuda [min-compute-size=50]
-# [00194.312 ms; 051 iters.] [3.1552e-06 err.] pagerankCuda [min-compute-size=100]
-# [00190.662 ms; 051 iters.] [3.0660e-06 err.] pagerankCuda [min-compute-size=500]
-# [00184.615 ms; 051 iters.] [3.0706e-06 err.] pagerankCuda [min-compute-size=1000]
-# [00165.183 ms; 051 iters.] [3.1470e-06 err.] pagerankCuda [min-compute-size=5000]
-# [00165.696 ms; 051 iters.] [3.1430e-06 err.] pagerankCuda [min-compute-size=10000]
-# [00155.293 ms; 051 iters.] [3.2172e-06 err.] pagerankCuda [min-compute-size=50000]
-# [00152.922 ms; 051 iters.] [3.1857e-06 err.] pagerankCuda [min-compute-size=100000]
-# [00151.506 ms; 051 iters.] [3.1882e-06 err.] pagerankCuda [min-compute-size=500000]
-# [00151.525 ms; 051 iters.] [3.1615e-06 err.] pagerankCuda [min-compute-size=1000000]
-# [00151.800 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=5000000]
-# [00151.167 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=10000000]
+# [00168.505 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00159.829 ms; 051 iters.] [3.2208e-06 err.] pagerankCuda
+# [00151.128 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [split]
+# [00151.501 ms; 051 iters.] [3.3554e-06 err.] pagerankCuda [split; sort]
 #
 # ...
 ```
