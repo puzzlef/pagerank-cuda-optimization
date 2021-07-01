@@ -1,3 +1,4 @@
+#include <cmath>
 #include <vector>
 #include <cstdio>
 #include <iostream>
@@ -9,12 +10,10 @@ using namespace std;
 
 
 #define REPEAT 5
-#define SPLIT_COMPONENTS true
-#define SORT_COMPONENTS  true
 
 template <class G, class H>
 void runPagerank(const G& x, const H& xt, bool show) {
-  vector<float> *init  = nullptr;
+  vector<float> *init = nullptr;
 
   // Find pagerank using nvGraph.
   auto a1 = pagerankNvgraph(xt, init, {REPEAT});
@@ -22,19 +21,23 @@ void runPagerank(const G& x, const H& xt, bool show) {
   printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankNvgraph\n", a1.time, a1.iterations, e1);
 
   // Find pagerank without optimization.
-  auto a2 = pagerankCuda(x, xt, init, {REPEAT});
+  auto a2 = pagerankCuda(xt, init, {REPEAT});
   auto e2 = l1Norm(a2.ranks, a1.ranks);
   printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda\n", a2.time, a2.iterations, e2);
 
-  // Find pagerank with vertices split by components.
-  auto a3 = pagerankCuda(x, xt, init, {REPEAT, SPLIT_COMPONENTS});
-  auto e3 = l1Norm(a3.ranks, a1.ranks);
-  printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [split]\n", a3.time, a3.iterations, e3);
+  // Find pagerank skipping converged vertices with re-check.
+  for (int skipCheck=2; skipCheck<16; skipCheck+=int(log2(skipCheck))) {
+    auto a3 = pagerankCuda(xt, init, {REPEAT, skipCheck, 0});
+    auto e3 = l1Norm(a3.ranks, a1.ranks);
+    printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [skip-check=%d]\n", a3.time, a3.iterations, e3, skipCheck);
+  }
 
-  // Find pagerank with components sorted in topological order.
-  auto a4 = pagerankCuda(x, xt, init, {REPEAT, SPLIT_COMPONENTS, SORT_COMPONENTS});
-  auto e4 = l1Norm(a4.ranks, a1.ranks);
-  printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [split; sort]\n", a4.time, a4.iterations, e4);
+  // Find pagerank skipping converged vertices after several turns.
+  for (int skipAfter=2; skipAfter<64; skipAfter+=int(log2(skipAfter))) {
+    auto a4 = pagerankCuda(xt, init, {REPEAT, 0, skipAfter});
+    auto e4 = l1Norm(a4.ranks, a1.ranks);
+    printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [skip-after=%d]\n", a4.time, a4.iterations, e4, skipAfter);
+  }
 }
 
 
