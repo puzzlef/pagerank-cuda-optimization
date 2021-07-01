@@ -9,12 +9,15 @@ using namespace std;
 
 
 #define REPEAT 5
-#define SPLIT_COMPONENTS true
-#define SORT_COMPONENTS  true
+#define SKIP_CHAINS true
 
 template <class G, class H>
 void runPagerank(const G& x, const H& xt, bool show) {
   vector<float> *init  = nullptr;
+
+  // Find chains.
+  auto ch = chains(x, xt);
+  printf("chains: %d chain-vertices: %d {}\n", size(ch), size2d(ch));
 
   // Find pagerank using nvGraph.
   auto a1 = pagerankNvgraph(xt, init, {REPEAT});
@@ -26,15 +29,10 @@ void runPagerank(const G& x, const H& xt, bool show) {
   auto e2 = l1Norm(a2.ranks, a1.ranks);
   printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda\n", a2.time, a2.iterations, e2);
 
-  // Find pagerank with vertices split by components.
-  auto a3 = pagerankCuda(x, xt, init, {REPEAT, SPLIT_COMPONENTS});
+  // Find pagerank skipping rank calculation of chain vertices.
+  auto a3 = pagerankCuda(x, xt, init, {REPEAT, SKIP_CHAINS});
   auto e3 = l1Norm(a3.ranks, a1.ranks);
-  printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [split]\n", a3.time, a3.iterations, e3);
-
-  // Find pagerank with components sorted in topological order.
-  auto a4 = pagerankCuda(x, xt, init, {REPEAT, SPLIT_COMPONENTS, SORT_COMPONENTS});
-  auto e4 = l1Norm(a4.ranks, a1.ranks);
-  printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [split; sort]\n", a4.time, a4.iterations, e4);
+  printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [skip]\n", a3.time, a3.iterations, e3);
 }
 
 

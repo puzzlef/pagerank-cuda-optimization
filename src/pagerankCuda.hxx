@@ -37,7 +37,7 @@ auto pagerankChainsRootDist(const G& x, const H& xt, J&& ks, const PagerankOptio
   int N = xt.order();
   vector<int> vroot(N);
   vector<int> vdist(N);
-  if (!o.skipChains) return vroot;
+  if (!o.skipChains) return make_pair(vroot, vdist);
   auto id = indices(ks);
   auto is = chains(x, xt);
   for (auto& vs : is) {
@@ -86,7 +86,7 @@ void pagerankFactorCu(T *a, const int *vdata, int i, int n, T p) {
 // ---------------
 
 template <class T>
-__global__ void pagerankChainsKernel(T *a, T *r, const int *vroot, const int *vdist, int i, int n, T c0) {
+__global__ void pagerankChainsKernel(T *a, T *r, const int *vroot, const int *vdist, int i, int n, T p, T c0) {
   DEFINE(t, b, B, G);
   for (int v=i+B*b+t; v<i+n; v+=G*B) {
     if (vroot[v]==0) continue;
@@ -96,10 +96,10 @@ __global__ void pagerankChainsKernel(T *a, T *r, const int *vroot, const int *vd
 }
 
 template <class T>
-void pagerankChainsCu(T *a, T *r, const int *vroot, const int *vdist, int i, int n, T c0) {
+void pagerankChainsCu(T *a, T *r, const int *vroot, const int *vdist, int i, int n, T p, T c0) {
   int B = BLOCK_DIM_M;
   int G = min(n, GRID_DIM_M);
-  pagerankChainsKernel<<<G, B>>>(a, r, vroot, vdist, i, n, c0);
+  pagerankChainsKernel<<<G, B>>>(a, r, vroot, vdist, i, n, p, c0);
 }
 
 
@@ -226,7 +226,7 @@ int pagerankCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD, const T 
     TRY( cudaMemcpy(r0, r0D, R1, cudaMemcpyDeviceToHost) );
     T c0 = (1-p)/N + p*sum(r0, R)/N;
     pagerankSwitchedCu(aD, cD, vfromD, efromD, i, ns, c0);
-    if (vrootD) pagerankChainsCu(aD, rD, vrootD, vdistD, i, n, c0);
+    if (vrootD) pagerankChainsCu(aD, rD, vrootD, vdistD, i, n, p, c0);
     l1NormCu(eD, rD+i, aD+i, n);
     TRY( cudaMemcpy(e, eD, R1, cudaMemcpyDeviceToHost) );
     T el = sum(e, R);
