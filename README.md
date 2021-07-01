@@ -1,21 +1,20 @@
-Performance benefit of **CUDA** based PageRank with **vertices split by**
-**components** ([pull], [CSR]).
+Performance benefit of **skipping in-identical vertices** for **CUDA** based
+PageRank ([pull], [CSR]).
 
 This experiment was for comparing performance between:
-1. Find **CUDA** based pagerank **without optimization**.
-2. Find **CUDA** based pagerank with vertices **split by components**.
-3. Find **CUDA** based pagerank with components **sorted in topological order**.
+1. Find pagerank **without optimization**.
+2. Find pagerank **skipping rank calculation of in-identical vertices**.
 
 Each approach was attempted on a number of graphs, running each approach 5
-times to get a good time measure. On an few graphs, **splitting vertices by**
-**components** provides a **speedup**, but *sorting components in*
-*topological order* provides *no additional speedup*. For road networks, like
-`germany_osm` which only have *one component*, the speedup is possibly because
-of the *vertex reordering* caused by `dfs()` which is required for splitting
-by components. However, **on average** there is **no speedup**.
+times to get a good time measure. On `indochina-2004` graph, **skipping**
+**in-identicals** provides a **speedup** of `~1.3`, but on average provides
+*no speedup* for other graphs. This could be due to the fact that the graph
+`indochina-2004` has a large number of **inidenticals** and **inidentical**
+**groups**. Although, it doesnt have the highest **inidentials %** or the
+highest **avg. inidentical group size**, so i am not so sure.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
-here. Some [charts] are also included below, generated from [sheets]. The input
+here. Some [charts] are to be included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
 the [SuiteSparse Matrix Collection].
 
@@ -33,26 +32,23 @@ $ ...
 # Loading graph /home/subhajit/data/web-Stanford.mtx ...
 # order: 281903 size: 2312497 {}
 # order: 281903 size: 2312497 {} (transposeWithDegree)
-# [00011.391 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00011.144 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
-# [00010.209 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [split]
-# [00010.585 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [split; sort]
+# inidenticals: 80096 inidentical-groups: 13684 {}
+# [00012.125 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00011.352 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
+# [00018.499 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [skip]
 #
 # ...
 #
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# [00168.505 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00159.829 ms; 051 iters.] [3.2208e-06 err.] pagerankCuda
-# [00151.128 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [split]
-# [00151.501 ms; 051 iters.] [3.3554e-06 err.] pagerankCuda [split; sort]
+# inidenticals: 556210 inidentical-groups: 203669 {}
+# [00168.124 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00158.059 ms; 051 iters.] [3.2208e-06 err.] pagerankCuda
+# [00166.893 ms; 051 iters.] [3.2467e-06 err.] pagerankCuda [skip]
 #
 # ...
 ```
-
-[![](https://i.imgur.com/HzHSUwU.png)][sheets]
-[![](https://i.imgur.com/JA1yqWM.png)][sheets]
 
 <br>
 <br>
@@ -74,5 +70,5 @@ $ ...
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[charts]: https://photos.app.goo.gl/yVYQcTfbXNejWYjD9
-[sheets]: https://docs.google.com/spreadsheets/d/1MPdNRJ_qJwLPverpRoxmGcghXNvwXEKCRg00Enea72E/edit?usp=sharing
+[charts]: https://www.example.com
+[sheets]: https://www.example.com
