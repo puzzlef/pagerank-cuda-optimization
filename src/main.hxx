@@ -10,6 +10,7 @@
 #include "dfs.hxx"
 #include "components.hxx"
 #include "topologicalSort.hxx"
+#include "chains.hxx"
 #include "pagerank.hxx"
 #include "pagerankNvgraph.hxx"
 #include "pagerankCuda.hxx"
