@@ -32,6 +32,7 @@ auto pagerankComponents(const H& xt) {
 
 template <class G, class H, class J, class T>
 auto pagerankIdenticalsRoot(const G& x, const H& xt, J&& ks, const PagerankOptions<T>& o) {
+  int N = xt.order();
   vector<int> vroot(N);
   if (!o.skipInidenticals) return vroot;
   auto id = indices(ks);

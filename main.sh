@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-src="pagerank-cuda-optimization-split-components"
+src="pagerank-cuda-optimization-skip-inidenticals"
 out="/home/resources/Documents/subhajit/$src.log"
 ulimit -s unlimited
 printf "" > "$out"

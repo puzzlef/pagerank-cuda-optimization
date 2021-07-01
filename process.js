@@ -4,6 +4,7 @@ const path = require('path');
 
 const RGRAPH = /^Loading graph .*\/(.+?)\.mtx \.\.\./m;
 const RORDER = /^order: (\d+) size: (\d+) \{\}$/m;
+const RIDENT = /^inidenticals: (\d+) inidentical-groups: (\d+) \{\}$/m;
 const RRESLT = /^\[(.+?) ms; (\d+) iters\.\] \[(.+?) err\.\] (.+)/m;
 
 
@@ -52,6 +53,11 @@ function readLogLine(ln, data, state) {
     var [, order, size] = RORDER.exec(ln);
     state.order = parseFloat(order);
     state.size  = parseFloat(size);
+  }
+  else if (RIDENT.test(ln)) {
+    var [, inidenticals, inidentical_groups] = RIDENT.exec(ln);
+    state.inidenticals       = parseFloat(inidenticals);
+    state.inidentical_groups = parseFloat(inidentical_groups);
   }
   else if (RRESLT.test(ln)) {
     var [, time, iterations, error, technique] = RRESLT.exec(ln);
