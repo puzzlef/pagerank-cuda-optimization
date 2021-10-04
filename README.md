@@ -16,8 +16,8 @@ highest **avg. inidentical group size**, so i am not so sure.
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are to be included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
-the [SuiteSparse Matrix Collection].
-
+the [SuiteSparse Matrix Collection]. This experiment was done with guidance
+from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -50,6 +50,12 @@ $ ...
 # ...
 ```
 
+[![](https://i.imgur.com/jVXZaag.png)][sheetp]
+[![](https://i.imgur.com/aCluuem.png)][sheetp]
+[![](https://i.imgur.com/EFdogyI.png)][sheetp]
+[![](https://i.imgur.com/G1adyiN.png)][sheetp]
+[![](https://i.imgur.com/uSoGHaF.png)][sheetp]
+
 <br>
 <br>
 
@@ -63,12 +69,15 @@ $ ...
 <br>
 <br>
 
-[![](https://i.imgur.com/tza58mI.png)](https://www.youtube.com/watch?v=eVvonVlbcFg)
+[![](https://i.imgur.com/Z7oiZSS.jpg)](https://www.youtube.com/watch?v=rKv_l1RnSqs)
 
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[charts]: https://www.example.com
-[sheets]: https://www.example.com
+[charts]: https://photos.app.goo.gl/ZQgXDrhbP5h1Tnkh8
+[sheets]: https://docs.google.com/spreadsheets/d/19OtYumoFGqgcKpwtbfjwfuJdgc_bf-JaSQ4H3EHQZHQ/edit?usp=sharing
+[sheetp]: https://docs.google.com/spreadsheets/d/e/2PACX-1vSgTpK_h4XE_TZck-cTpDV6ne8EvjlOXG5D7JI8k-7QMR5Q9dCmputHDtyJxGc27_BWc0TjletpNRzw/pubhtml
