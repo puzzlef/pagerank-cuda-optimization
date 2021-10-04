@@ -9,16 +9,17 @@ This experiment was for comparing performance between:
 Each approach was attempted on a number of graphs, running each approach 5
 times to get a good time measure. On an few graphs, **splitting vertices by**
 **components** provides a **speedup**, but *sorting components in*
-*topological order* provides *no additional speedup*. For road networks, like
-`germany_osm` which only have *one component*, the speedup is possibly because
-of the *vertex reordering* caused by `dfs()` which is required for splitting
-by components. However, **on average** there is **no speedup**.
+*topological order* provides *no additional speedup*. For **road networks**
+(and some **web graph**), like `germany_osm` which only have *one component*,
+the speedup is possibly because of the *vertex reordering* caused by `dfs()`
+which is required for splitting by components. However, **on average** there
+is **no speedup**.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
-the [SuiteSparse Matrix Collection].
-
+the [SuiteSparse Matrix Collection]. This experiment was done with guidance
+from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -51,8 +52,8 @@ $ ...
 # ...
 ```
 
-[![](https://i.imgur.com/HzHSUwU.png)][sheets]
-[![](https://i.imgur.com/JA1yqWM.png)][sheets]
+[![](https://i.imgur.com/uXlPCB3.png)][sheetp]
+[![](https://i.imgur.com/UooLZXJ.png)][sheetp]
 
 <br>
 <br>
@@ -69,10 +70,13 @@ $ ...
 
 [![](https://i.imgur.com/tza58mI.png)](https://www.youtube.com/watch?v=eVvonVlbcFg)
 
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
 [charts]: https://photos.app.goo.gl/yVYQcTfbXNejWYjD9
-[sheets]: https://docs.google.com/spreadsheets/d/1MPdNRJ_qJwLPverpRoxmGcghXNvwXEKCRg00Enea72E/edit?usp=sharing
+[sheets]: https://docs.google.com/spreadsheets/d/11jNXOQ7ytr4HoFOAD69vjhaU5i3IM2ZmnvPwq5cB_OM/edit?usp=sharing
+[sheetp]: https://docs.google.com/spreadsheets/d/e/2PACX-1vSj76IE-B0H56eOvb_MTal8gVAzfYTv_7YpCmmi6B3UplO62Y8Q6NY4fJWq7RBg-IcQ_Dc0CA8kqPuH/pubhtml
