@@ -16,8 +16,8 @@ have chains, but they are *bi-directional*, and thus not considered here.
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are to be included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
-the [SuiteSparse Matrix Collection].
-
+the [SuiteSparse Matrix Collection]. This experiment was done with guidance
+from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -50,6 +50,12 @@ $ ...
 # ...
 ```
 
+[![](https://i.imgur.com/3RRLBov.png)][sheetp]
+[![](https://i.imgur.com/oEwQcql.png)][sheetp]
+[![](https://i.imgur.com/Qo8zEbb.png)][sheetp]
+[![](https://i.imgur.com/We6qyN6.png)][sheetp]
+[![](https://i.imgur.com/7NbW78u.png)][sheetp]
+
 <br>
 <br>
 
@@ -63,10 +69,15 @@ $ ...
 <br>
 <br>
 
+[![](https://i.imgur.com/CB5t3WL.jpg)](https://www.youtube.com/watch?v=gUHejU7qyv8)
+
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[charts]: https://www.example.com
-[sheets]: https://www.example.com
+[charts]: https://photos.app.goo.gl/aZrQrYTmLAJMhQBQ9
+[sheets]: https://docs.google.com/spreadsheets/d/1XFDSB-OjMi7vKQuAh6jWqBCBhtvvnaPg-xOn7D91_sY/edit?usp=sharing
+[sheetp]: https://docs.google.com/spreadsheets/d/e/2PACX-1vSoYTEti_-5sZiH8ijiyozkGoA09cSzi_25PQAvcj2-7LeAQRKjMby4sXOim7bmihSI2YIgOE9g_JPK/pubhtml
