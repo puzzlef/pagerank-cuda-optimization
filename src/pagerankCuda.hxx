@@ -42,15 +42,13 @@ void pagerankPartition(const H& xt, vector<int>& ks) {
 
 template <class G, class H, class T>
 auto pagerankComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
-  if (!o.splitComponents) return vector2d<int> {vertices(xt)};
-  if (!o.sortComponents)  return components(x, xt);
-  return sortedComponents(x, xt);
+  return components(x, xt);
 }
 
 template <class G, class H, class T>
 auto pagerankCudaComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
   auto cs = pagerankComponents(x, xt, o);
-  auto a  = joinUntilSize(cs, MIN_COMPUTE_PRC());
+  auto a  = joinUntilSize(cs, o.minComponentSize);
   for (auto& ks : a)
     pagerankPartition(xt, ks);
   return a;
