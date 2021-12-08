@@ -50,7 +50,7 @@ auto pagerankComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
 template <class G, class H, class T>
 auto pagerankCudaComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
   auto cs = pagerankComponents(x, xt, o);
-  auto a  = joinUntilSize(cs, MIN_COMPUTE_SIZE_PRC());
+  auto a  = joinUntilSize(cs, MIN_COMPUTE_PRC());
   for (auto& ks : a)
     pagerankPartition(xt, ks);
   return a;
@@ -92,7 +92,7 @@ auto pagerankDynamicComponents(const G& x, const H& xt, const G& y, const H& yt,
 template <class G, class H, class T>
 auto pagerankCudaDynamicComponents(const G& x, const H& xt, const G& y, const H& yt, const PagerankOptions<T>& o) {
   auto [cs, n] = pagerankDynamicComponents(x, xt, y, yt, o);
-  auto a  = joinUntilSize(sliceIter(cs, 0, n), MIN_COMPUTE_SIZE_PRC());
+  auto a  = joinUntilSize(sliceIter(cs, 0, n), MIN_COMPUTE_PRC());
   for (auto& ks : a)
     pagerankPartition(xt, ks);
   a.push_back(join(sliceIter(cs, n)));
@@ -248,7 +248,7 @@ void pagerankComponentWave(vector<int>& a, const H& xt, const J& cs) {
 }
 template <class H, class J>
 auto pagerankComponentWave(const H& xt, const J& cs) {
-  vector<int> a; pagerankWave(a, xt, cs);
+  vector<int> a; pagerankComponentWave(a, xt, cs);
   return a;
 }
 
@@ -329,7 +329,7 @@ PagerankResult<T> pagerankCuda(const H& xt, const J& ks, int i, const M& ns, FL 
     TRY( cudaMemcpy(aD, r.data(), N1, cudaMemcpyHostToDevice) );
     TRY( cudaMemcpy(rD, r.data(), N1, cudaMemcpyHostToDevice) );
     mark([&] { pagerankFactorCu(fD, vdataD, 0, N, p); multiplyCu(cD, aD, fD, N); });                       // calculate factors (fD) and contributions (cD)
-    mark([&] { l = fl(e, r0, eD, r0D, aD, rD, cD, fD, vfromD, efromD, i, ns, N, p, E, L, EF); });  // calculate ranks of vertices
+    mark([&] { l = fl(e, r0, eD, r0D, aD, rD, cD, fD, vfromD, efromD, vdataD, i, ns, N, p, E, L, EF); });  // calculate ranks of vertices
   }, o.repeat);
   TRY( cudaMemcpy(a.data(), aD, N1, cudaMemcpyDeviceToHost) );
 

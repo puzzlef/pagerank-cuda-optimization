@@ -15,9 +15,7 @@
 #include "topologicalSort.hxx"
 #include "dynamic.hxx"
 #include "pagerank.hxx"
-#include "pagerankSeq.hxx"
 #include "pagerankCuda.hxx"
-#include "pagerankMonolithicSeq.hxx"
 #include "pagerankMonolithicCuda.hxx"
 
 #ifndef NVGRAPH_DISABLE

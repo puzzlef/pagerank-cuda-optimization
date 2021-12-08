@@ -140,7 +140,7 @@ void joinIf(vector2d<T>& a, const J& xs, F fn) {
 
 template <class J, class F>
 auto joinIf(const J& xs, F fn) {
-  using T = decltype((*xs.begin())[0]);
+  using T = typename J::value_type::value_type;
   vector2d<T> a; joinIf(a, xs, fn);
   return a;
 }
@@ -154,7 +154,7 @@ void joinUntilSize(vector2d<T>& a, const J& xs, int S) {
 
 template <class J>
 auto joinUntilSize(const J& xs, int S) {
-  using T = decltype((*xs.begin())[0]);
+  using T = typename J::value_type::value_type;
   vector2d<T> a; joinUntilSize(a, xs, S);
   return a;
 }
@@ -168,7 +168,7 @@ void join(vector<T>& a, const J& xs) {
 
 template <class J>
 auto join(const J& xs) {
-  using T = decltype((*xs.begin())[0]);
+  using T = typename J::value_type::value_type;
   vector<T> a; join(a, xs);
   return a;
 }
