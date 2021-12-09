@@ -1,11 +1,18 @@
 Comparing various **min. compute sizes** for **CUDA** based PageRank ([pull], [CSR]).
 
-For this experiment, the vertices were **split by components**, and were
-joined together until they satisfied a **min. compute size**. Each joined
-component is then run through *pagerank compute call*. **Min. compute size**
-was varied from `1E+0` to `5E+7`, and pagerank was run 5 times to get a good
-time measure. A **min. compute size** of `5E+6` would be a good choice,
-similar to [levelwise CUDA].
+For this experiment, the vertices were **split by components**, and were joined
+together until they satisfied a **min. compute size**. Each joined component is
+then run through *pagerank compute call*. **Min. compute size** was varied from
+`1E+0` to `5E+7`, and pagerank was run 5 times to get a good time measure. Both
+from GM and AM execution times, it is observed that with a low *min compute*,
+the time taken for PageRank computation is significatly high. This is likely
+because with a lot of small components, a large number of kernel calls have to
+be made, which is expensive business. Again, it is observed that with a large
+*min compute*, the time taken for PageRank computation is also somewhat high.
+This can be made sense of by considering that large *min compute* effectively
+disables splitting by components, and thus prevents any memory locality benefits
+through memory coalescing or cache utilization, as explained [here]. A sweet
+spot is found in the mid of the two extremes at a **min compute** of `1E+6`.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
@@ -46,7 +53,9 @@ $ ...
 # ...
 ```
 
-[![](https://i.imgur.com/fUfdxKB.gif)][sheets]
+[![](https://i.imgur.com/fUfdxKB.gif)][sheetp]
+[![](https://i.imgur.com/alBEubg.png)][sheetp]
+[![](https://i.imgur.com/grMjxPK.png)][sheetp]
 
 <br>
 <br>
@@ -62,7 +71,7 @@ $ ...
 <br>
 <br>
 
-[![](https://i.imgur.com/j3ml4cd.jpg)](https://www.youtube.com/watch?v=4Xw0MrllRfQ)
+[![](https://i.imgur.com/1KQzxjU.jpg)](https://www.youtube.com/watch?v=4Xw0MrllRfQ)
 
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
 [Prof. Kishore Kothapalli]: https://www.iiit.ac.in/people/faculty/kkishore/
@@ -70,6 +79,7 @@ $ ...
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[levelwise CUDA]: https://github.com/puzzlef/pagerank-levelwise-cuda-adjust-compute-size
+[here]: https://github.com/puzzlef/pagerank-optimization-split-components
 [charts]: https://photos.app.goo.gl/uFFqJ9NFfe5uxSxx9
 [sheets]: https://docs.google.com/spreadsheets/d/1ZFnirMXPX7GFGwLaGKkbqu2f7KiTFPkvRYixq_mUDno/edit?usp=sharing
+[sheetp]: https://docs.google.com/spreadsheets/d/e/2PACX-1vTevnZVIFXfyfpeO81c_ivPVtlfyBJ1wvxYw4L9M2yI12a7joqnP895-c_3V3eDn0v8B4p_vPO-VEMG/pubhtml

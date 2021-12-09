@@ -90,7 +90,7 @@ auto pagerankDynamicComponents(const G& x, const H& xt, const G& y, const H& yt,
 template <class G, class H, class T>
 auto pagerankCudaDynamicComponents(const G& x, const H& xt, const G& y, const H& yt, const PagerankOptions<T>& o) {
   auto [cs, n] = pagerankDynamicComponents(x, xt, y, yt, o);
-  auto a  = joinUntilSize(sliceIter(cs, 0, n), MIN_COMPUTE_PRC());
+  auto a  = joinUntilSize(sliceIter(cs, 0, n), o.minCompute);
   for (auto& ks : a)
     pagerankPartition(xt, ks);
   a.push_back(join(sliceIter(cs, n)));
