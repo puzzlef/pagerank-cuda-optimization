@@ -34,20 +34,20 @@ $ ...
 # Loading graph /home/subhajit/data/web-Stanford.mtx ...
 # order: 281903 size: 2312497 {}
 # order: 281903 size: 2312497 {} (transposeWithDegree)
-# [00011.391 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00011.144 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
-# [00010.209 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [split]
-# [00010.585 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [split; sort]
+# [00011.339 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00011.281 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
+# [00010.335 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [split]
+# [00010.381 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [split; sort]
 #
 # ...
 #
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# [00168.505 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00159.829 ms; 051 iters.] [3.2208e-06 err.] pagerankCuda
-# [00151.128 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [split]
-# [00151.501 ms; 051 iters.] [3.3554e-06 err.] pagerankCuda [split; sort]
+# [00167.890 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00159.698 ms; 051 iters.] [3.1616e-06 err.] pagerankCuda
+# [00151.696 ms; 051 iters.] [3.0290e-06 err.] pagerankCuda [split]
+# [00151.516 ms; 051 iters.] [3.1139e-06 err.] pagerankCuda [split; sort]
 #
 # ...
 ```
@@ -61,8 +61,9 @@ $ ...
 
 ## References
 
-- [STIC-D: algorithmic techniques for efficient parallel pagerank computation on real-world graphs][STIC-D algorithm]
-- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](http://snap.stanford.edu/class/cs246-videos-2019/lec9_190205-cs246-720.mp4)
+- [STIC-D: Algorithmic Techniques For Efficient Parallel Pagerank Computation on Real-World Graphs](https://gist.github.com/wolfram77/bb09968cc0e592583c4b180243697d5a)
+- [Adjusting PageRank parameters and Comparing results](https://arxiv.org/abs/2108.02997)
+- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](https://www.youtube.com/watch?v=ke9g8hB0MEo)
 - [SuiteSparse Matrix Collection]
 
 <br>
@@ -71,9 +72,8 @@ $ ...
 [![](https://i.imgur.com/tza58mI.png)](https://www.youtube.com/watch?v=eVvonVlbcFg)
 
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
-[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
-[STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
-[SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
+[Prof. Kishore Kothapalli]: https://www.iiit.ac.in/people/faculty/kkishore/
+[SuiteSparse Matrix Collection]: https://sparse.tamu.edu
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
