@@ -10,7 +10,8 @@ similar to [levelwise CUDA].
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
-the [SuiteSparse Matrix Collection].
+the [SuiteSparse Matrix Collection]. This experiment was done with guidance
+from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -25,22 +26,22 @@ $ ...
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# [00168.072 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00355.320 ms; 051 iters.] [3.1464e-06 err.] pagerankCuda [min-compute-size=1]
-# [00359.799 ms; 051 iters.] [3.1664e-06 err.] pagerankCuda [min-compute-size=5]
-# [00370.237 ms; 051 iters.] [3.1290e-06 err.] pagerankCuda [min-compute-size=10]
-# [00213.362 ms; 051 iters.] [3.0922e-06 err.] pagerankCuda [min-compute-size=50]
-# [00194.312 ms; 051 iters.] [3.1552e-06 err.] pagerankCuda [min-compute-size=100]
-# [00190.662 ms; 051 iters.] [3.0660e-06 err.] pagerankCuda [min-compute-size=500]
-# [00184.615 ms; 051 iters.] [3.0706e-06 err.] pagerankCuda [min-compute-size=1000]
-# [00165.183 ms; 051 iters.] [3.1470e-06 err.] pagerankCuda [min-compute-size=5000]
-# [00165.696 ms; 051 iters.] [3.1430e-06 err.] pagerankCuda [min-compute-size=10000]
-# [00155.293 ms; 051 iters.] [3.2172e-06 err.] pagerankCuda [min-compute-size=50000]
-# [00152.922 ms; 051 iters.] [3.1857e-06 err.] pagerankCuda [min-compute-size=100000]
-# [00151.506 ms; 051 iters.] [3.1882e-06 err.] pagerankCuda [min-compute-size=500000]
-# [00151.525 ms; 051 iters.] [3.1615e-06 err.] pagerankCuda [min-compute-size=1000000]
-# [00151.800 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=5000000]
-# [00151.167 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=10000000]
+# [00167.968 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00354.189 ms; 051 iters.] [3.0248e-06 err.] pagerankCuda [min-compute=1]
+# [00359.688 ms; 051 iters.] [3.0147e-06 err.] pagerankCuda [min-compute=5]
+# [00370.161 ms; 051 iters.] [3.0311e-06 err.] pagerankCuda [min-compute=10]
+# [00215.243 ms; 051 iters.] [3.0474e-06 err.] pagerankCuda [min-compute=50]
+# [00193.222 ms; 051 iters.] [3.0905e-06 err.] pagerankCuda [min-compute=100]
+# [00190.736 ms; 051 iters.] [3.0432e-06 err.] pagerankCuda [min-compute=500]
+# [00184.762 ms; 051 iters.] [3.0680e-06 err.] pagerankCuda [min-compute=1000]
+# [00166.049 ms; 051 iters.] [3.0745e-06 err.] pagerankCuda [min-compute=5000]
+# [00165.249 ms; 051 iters.] [3.0696e-06 err.] pagerankCuda [min-compute=10000]
+# [00156.035 ms; 051 iters.] [3.0847e-06 err.] pagerankCuda [min-compute=50000]
+# [00153.055 ms; 051 iters.] [3.0731e-06 err.] pagerankCuda [min-compute=100000]
+# [00152.096 ms; 051 iters.] [3.0786e-06 err.] pagerankCuda [min-compute=500000]
+# [00151.729 ms; 051 iters.] [3.0290e-06 err.] pagerankCuda [min-compute=1000000]
+# [00150.901 ms; 051 iters.] [3.1235e-06 err.] pagerankCuda [min-compute=5000000]
+# [00150.858 ms; 051 iters.] [3.1235e-06 err.] pagerankCuda [min-compute=10000000]
 #
 # ...
 ```
@@ -53,8 +54,9 @@ $ ...
 
 ## References
 
-- [STIC-D: algorithmic techniques for efficient parallel pagerank computation on real-world graphs][STIC-D algorithm]
-- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](http://snap.stanford.edu/class/cs246-videos-2019/lec9_190205-cs246-720.mp4)
+- [STIC-D: Algorithmic Techniques For Efficient Parallel Pagerank Computation on Real-World Graphs](https://gist.github.com/wolfram77/bb09968cc0e592583c4b180243697d5a)
+- [Adjusting PageRank parameters and Comparing results](https://arxiv.org/abs/2108.02997)
+- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](https://www.youtube.com/watch?v=ke9g8hB0MEo)
 - [SuiteSparse Matrix Collection]
 
 <br>
@@ -62,8 +64,9 @@ $ ...
 
 [![](https://i.imgur.com/j3ml4cd.jpg)](https://www.youtube.com/watch?v=4Xw0MrllRfQ)
 
-[STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
-[SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://www.iiit.ac.in/people/faculty/kkishore/
+[SuiteSparse Matrix Collection]: https://sparse.tamu.edu
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr

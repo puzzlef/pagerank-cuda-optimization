@@ -48,7 +48,7 @@ auto pagerankComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
 template <class G, class H, class T>
 auto pagerankCudaComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
   auto cs = pagerankComponents(x, xt, o);
-  auto a  = joinUntilSize(cs, o.minComponentSize);
+  auto a  = joinUntilSize(cs, o.minCompute);
   for (auto& ks : a)
     pagerankPartition(xt, ks);
   return a;

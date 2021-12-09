@@ -1,347 +1,347 @@
 Loading graph /home/subhajit/data/min-1DeadEnd.mtx ...
 order: 5 size: 6 {}
 order: 5 size: 6 {} (transposeWithDegree)
-[00001.613 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00000.602 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [min-compute-size=1]
-[00000.589 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [min-compute-size=5]
-[00000.580 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [min-compute-size=10]
+[00001.707 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00000.576 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [min-compute=1]
+[00000.565 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [min-compute=5]
+[00000.571 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [min-compute=10]
 
 Loading graph /home/subhajit/data/min-2SCC.mtx ...
 order: 8 size: 12 {}
 order: 8 size: 12 {} (transposeWithDegree)
-[00003.784 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00001.372 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda [min-compute-size=1]
-[00001.377 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda [min-compute-size=5]
-[00001.389 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda [min-compute-size=10]
+[00003.724 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00001.331 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda [min-compute=1]
+[00001.378 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda [min-compute=5]
+[00001.412 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda [min-compute=10]
 
 Loading graph /home/subhajit/data/min-4SCC.mtx ...
 order: 21 size: 35 {}
 order: 21 size: 35 {} (transposeWithDegree)
-[00004.368 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00001.448 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute-size=1]
-[00001.411 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute-size=5]
-[00001.429 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute-size=10]
-[00001.435 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute-size=50]
-[00001.441 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute-size=100]
+[00004.039 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00001.577 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute=1]
+[00001.586 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute=5]
+[00001.593 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute=10]
+[00001.528 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute=50]
+[00001.557 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [min-compute=100]
 
 Loading graph /home/subhajit/data/min-NvgraphEx.mtx ...
 order: 6 size: 10 {}
 order: 6 size: 10 {} (transposeWithDegree)
-[00002.230 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00000.841 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [min-compute-size=1]
-[00000.863 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [min-compute-size=5]
-[00000.837 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [min-compute-size=10]
+[00002.351 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00000.810 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [min-compute=1]
+[00000.799 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [min-compute=5]
+[00000.823 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [min-compute=10]
 
 Loading graph /home/subhajit/data/web-Stanford.mtx ...
 order: 281903 size: 2312497 {}
 order: 281903 size: 2312497 {} (transposeWithDegree)
-[00011.406 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00297.181 ms; 063 iters.] [1.0703e-06 err.] pagerankCuda [min-compute-size=1]
-[00245.329 ms; 063 iters.] [1.0775e-06 err.] pagerankCuda [min-compute-size=5]
-[00229.475 ms; 063 iters.] [1.0960e-06 err.] pagerankCuda [min-compute-size=10]
-[00034.688 ms; 063 iters.] [1.1020e-06 err.] pagerankCuda [min-compute-size=50]
-[00034.671 ms; 063 iters.] [1.1020e-06 err.] pagerankCuda [min-compute-size=100]
-[00034.748 ms; 063 iters.] [1.1015e-06 err.] pagerankCuda [min-compute-size=500]
-[00035.924 ms; 063 iters.] [1.0778e-06 err.] pagerankCuda [min-compute-size=1000]
-[00044.761 ms; 063 iters.] [1.0070e-06 err.] pagerankCuda [min-compute-size=5000]
-[00018.443 ms; 063 iters.] [7.0370e-07 err.] pagerankCuda [min-compute-size=10000]
-[00012.722 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute-size=50000]
-[00010.939 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute-size=100000]
-[00009.709 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute-size=500000]
-[00009.709 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute-size=1000000]
+[00011.272 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00297.311 ms; 063 iters.] [1.0703e-06 err.] pagerankCuda [min-compute=1]
+[00244.807 ms; 063 iters.] [1.0775e-06 err.] pagerankCuda [min-compute=5]
+[00229.682 ms; 063 iters.] [1.0960e-06 err.] pagerankCuda [min-compute=10]
+[00034.765 ms; 063 iters.] [1.1020e-06 err.] pagerankCuda [min-compute=50]
+[00034.738 ms; 063 iters.] [1.1020e-06 err.] pagerankCuda [min-compute=100]
+[00034.902 ms; 063 iters.] [1.1015e-06 err.] pagerankCuda [min-compute=500]
+[00035.822 ms; 063 iters.] [1.0778e-06 err.] pagerankCuda [min-compute=1000]
+[00044.791 ms; 063 iters.] [1.0070e-06 err.] pagerankCuda [min-compute=5000]
+[00018.579 ms; 063 iters.] [7.0370e-07 err.] pagerankCuda [min-compute=10000]
+[00012.736 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute=50000]
+[00011.023 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute=100000]
+[00009.756 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute=500000]
+[00009.737 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/web-BerkStan.mtx ...
 order: 685230 size: 7600595 {}
 order: 685230 size: 7600595 {} (transposeWithDegree)
-[00015.963 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00482.906 ms; 064 iters.] [2.2296e-06 err.] pagerankCuda [min-compute-size=1]
-[00460.460 ms; 064 iters.] [2.2302e-06 err.] pagerankCuda [min-compute-size=5]
-[00451.006 ms; 064 iters.] [2.2304e-06 err.] pagerankCuda [min-compute-size=10]
-[00134.378 ms; 064 iters.] [2.2467e-06 err.] pagerankCuda [min-compute-size=50]
-[00132.784 ms; 064 iters.] [2.2474e-06 err.] pagerankCuda [min-compute-size=100]
-[00128.290 ms; 064 iters.] [2.2459e-06 err.] pagerankCuda [min-compute-size=500]
-[00113.833 ms; 064 iters.] [1.3416e-06 err.] pagerankCuda [min-compute-size=1000]
-[00088.563 ms; 064 iters.] [1.1302e-06 err.] pagerankCuda [min-compute-size=5000]
-[00056.121 ms; 064 iters.] [9.9762e-07 err.] pagerankCuda [min-compute-size=10000]
-[00036.016 ms; 064 iters.] [9.6966e-07 err.] pagerankCuda [min-compute-size=50000]
-[00032.601 ms; 064 iters.] [9.7117e-07 err.] pagerankCuda [min-compute-size=100000]
-[00024.624 ms; 064 iters.] [9.7117e-07 err.] pagerankCuda [min-compute-size=500000]
-[00021.656 ms; 064 iters.] [9.7117e-07 err.] pagerankCuda [min-compute-size=1000000]
+[00015.757 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00483.869 ms; 064 iters.] [2.2435e-06 err.] pagerankCuda [min-compute=1]
+[00462.027 ms; 064 iters.] [2.2441e-06 err.] pagerankCuda [min-compute=5]
+[00451.961 ms; 064 iters.] [2.2444e-06 err.] pagerankCuda [min-compute=10]
+[00134.015 ms; 064 iters.] [2.2703e-06 err.] pagerankCuda [min-compute=50]
+[00132.492 ms; 064 iters.] [2.2625e-06 err.] pagerankCuda [min-compute=100]
+[00127.961 ms; 064 iters.] [2.2707e-06 err.] pagerankCuda [min-compute=500]
+[00113.584 ms; 064 iters.] [1.3659e-06 err.] pagerankCuda [min-compute=1000]
+[00088.583 ms; 064 iters.] [1.1463e-06 err.] pagerankCuda [min-compute=5000]
+[00055.969 ms; 064 iters.] [1.0090e-06 err.] pagerankCuda [min-compute=10000]
+[00035.936 ms; 064 iters.] [9.8151e-07 err.] pagerankCuda [min-compute=50000]
+[00032.417 ms; 064 iters.] [9.8030e-07 err.] pagerankCuda [min-compute=100000]
+[00024.631 ms; 064 iters.] [9.8031e-07 err.] pagerankCuda [min-compute=500000]
+[00021.591 ms; 064 iters.] [9.8030e-07 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/web-Google.mtx ...
 order: 916428 size: 5105039 {}
 order: 916428 size: 5105039 {} (transposeWithDegree)
-[00021.157 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00202.408 ms; 062 iters.] [1.3018e-06 err.] pagerankCuda [min-compute-size=1]
-[00218.675 ms; 062 iters.] [1.3108e-06 err.] pagerankCuda [min-compute-size=5]
-[00237.847 ms; 062 iters.] [1.3203e-06 err.] pagerankCuda [min-compute-size=10]
-[00023.970 ms; 062 iters.] [1.4194e-06 err.] pagerankCuda [min-compute-size=50]
-[00023.905 ms; 062 iters.] [1.4161e-06 err.] pagerankCuda [min-compute-size=100]
-[00024.003 ms; 062 iters.] [1.7010e-06 err.] pagerankCuda [min-compute-size=500]
-[00025.268 ms; 062 iters.] [1.6360e-06 err.] pagerankCuda [min-compute-size=1000]
-[00029.529 ms; 062 iters.] [1.5281e-06 err.] pagerankCuda [min-compute-size=5000]
-[00019.305 ms; 062 iters.] [1.5534e-06 err.] pagerankCuda [min-compute-size=10000]
-[00014.483 ms; 062 iters.] [1.5793e-06 err.] pagerankCuda [min-compute-size=50000]
-[00012.954 ms; 062 iters.] [1.6052e-06 err.] pagerankCuda [min-compute-size=100000]
-[00011.691 ms; 062 iters.] [1.4964e-06 err.] pagerankCuda [min-compute-size=500000]
-[00010.614 ms; 062 iters.] [1.4669e-06 err.] pagerankCuda [min-compute-size=1000000]
+[00021.177 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00202.269 ms; 062 iters.] [1.7411e-06 err.] pagerankCuda [min-compute=1]
+[00218.668 ms; 062 iters.] [1.7304e-06 err.] pagerankCuda [min-compute=5]
+[00238.079 ms; 062 iters.] [1.7312e-06 err.] pagerankCuda [min-compute=10]
+[00024.093 ms; 062 iters.] [1.7526e-06 err.] pagerankCuda [min-compute=50]
+[00024.639 ms; 062 iters.] [1.7675e-06 err.] pagerankCuda [min-compute=100]
+[00024.099 ms; 062 iters.] [1.6298e-06 err.] pagerankCuda [min-compute=500]
+[00025.496 ms; 062 iters.] [1.8086e-06 err.] pagerankCuda [min-compute=1000]
+[00029.642 ms; 062 iters.] [1.5748e-06 err.] pagerankCuda [min-compute=5000]
+[00019.477 ms; 062 iters.] [1.6460e-06 err.] pagerankCuda [min-compute=10000]
+[00014.672 ms; 062 iters.] [1.6316e-06 err.] pagerankCuda [min-compute=50000]
+[00013.106 ms; 062 iters.] [1.6949e-06 err.] pagerankCuda [min-compute=100000]
+[00011.859 ms; 062 iters.] [1.7680e-06 err.] pagerankCuda [min-compute=500000]
+[00010.785 ms; 062 iters.] [1.3510e-06 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/web-NotreDame.mtx ...
 order: 325729 size: 1497134 {}
 order: 325729 size: 1497134 {} (transposeWithDegree)
-[00009.451 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00169.118 ms; 058 iters.] [3.1518e-06 err.] pagerankCuda [min-compute-size=1]
-[00174.141 ms; 058 iters.] [3.2121e-06 err.] pagerankCuda [min-compute-size=5]
-[00176.237 ms; 058 iters.] [3.2127e-06 err.] pagerankCuda [min-compute-size=10]
-[00034.680 ms; 058 iters.] [3.5213e-06 err.] pagerankCuda [min-compute-size=50]
-[00034.599 ms; 058 iters.] [3.5364e-06 err.] pagerankCuda [min-compute-size=100]
-[00033.449 ms; 058 iters.] [3.6235e-06 err.] pagerankCuda [min-compute-size=500]
-[00034.280 ms; 058 iters.] [3.8325e-06 err.] pagerankCuda [min-compute-size=1000]
-[00033.014 ms; 058 iters.] [3.2623e-06 err.] pagerankCuda [min-compute-size=5000]
-[00028.306 ms; 058 iters.] [3.4007e-06 err.] pagerankCuda [min-compute-size=10000]
-[00011.689 ms; 058 iters.] [3.5844e-06 err.] pagerankCuda [min-compute-size=50000]
-[00009.304 ms; 058 iters.] [2.9878e-06 err.] pagerankCuda [min-compute-size=100000]
-[00005.615 ms; 058 iters.] [3.4257e-06 err.] pagerankCuda [min-compute-size=500000]
-[00005.618 ms; 058 iters.] [3.4257e-06 err.] pagerankCuda [min-compute-size=1000000]
+[00008.673 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00168.467 ms; 058 iters.] [3.4250e-06 err.] pagerankCuda [min-compute=1]
+[00173.864 ms; 058 iters.] [3.4291e-06 err.] pagerankCuda [min-compute=5]
+[00176.274 ms; 058 iters.] [3.4287e-06 err.] pagerankCuda [min-compute=10]
+[00035.071 ms; 058 iters.] [3.8042e-06 err.] pagerankCuda [min-compute=50]
+[00034.990 ms; 058 iters.] [3.7624e-06 err.] pagerankCuda [min-compute=100]
+[00033.940 ms; 058 iters.] [3.6760e-06 err.] pagerankCuda [min-compute=500]
+[00034.603 ms; 058 iters.] [3.5979e-06 err.] pagerankCuda [min-compute=1000]
+[00033.555 ms; 058 iters.] [3.3948e-06 err.] pagerankCuda [min-compute=5000]
+[00028.360 ms; 058 iters.] [3.3994e-06 err.] pagerankCuda [min-compute=10000]
+[00011.688 ms; 058 iters.] [3.2360e-06 err.] pagerankCuda [min-compute=50000]
+[00009.256 ms; 058 iters.] [3.6422e-06 err.] pagerankCuda [min-compute=100000]
+[00005.911 ms; 058 iters.] [3.4656e-06 err.] pagerankCuda [min-compute=500000]
+[00005.679 ms; 058 iters.] [3.4656e-06 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/soc-Slashdot0811.mtx ...
 order: 77360 size: 905468 {}
 order: 77360 size: 905468 {} (transposeWithDegree)
-[00006.718 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00004.787 ms; 055 iters.] [9.0898e-07 err.] pagerankCuda [min-compute-size=1]
-[00004.767 ms; 055 iters.] [9.0898e-07 err.] pagerankCuda [min-compute-size=5]
-[00004.771 ms; 055 iters.] [9.0898e-07 err.] pagerankCuda [min-compute-size=10]
-[00004.084 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute-size=50]
-[00004.255 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute-size=100]
-[00004.246 ms; 055 iters.] [9.0879e-07 err.] pagerankCuda [min-compute-size=500]
-[00004.257 ms; 055 iters.] [9.0879e-07 err.] pagerankCuda [min-compute-size=1000]
-[00004.072 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute-size=5000]
-[00004.092 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute-size=10000]
-[00004.093 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute-size=50000]
-[00003.517 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute-size=100000]
+[00006.701 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00004.432 ms; 055 iters.] [9.0898e-07 err.] pagerankCuda [min-compute=1]
+[00004.423 ms; 055 iters.] [9.0898e-07 err.] pagerankCuda [min-compute=5]
+[00004.449 ms; 055 iters.] [9.0898e-07 err.] pagerankCuda [min-compute=10]
+[00003.543 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute=50]
+[00003.709 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute=100]
+[00003.753 ms; 055 iters.] [9.0879e-07 err.] pagerankCuda [min-compute=500]
+[00003.748 ms; 055 iters.] [9.0879e-07 err.] pagerankCuda [min-compute=1000]
+[00003.540 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute=5000]
+[00003.943 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute=10000]
+[00003.971 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute=50000]
+[00003.438 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [min-compute=100000]
 
 Loading graph /home/subhajit/data/soc-Slashdot0902.mtx ...
 order: 82168 size: 948464 {}
 order: 82168 size: 948464 {} (transposeWithDegree)
-[00006.936 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00005.739 ms; 056 iters.] [8.4885e-07 err.] pagerankCuda [min-compute-size=1]
-[00005.741 ms; 056 iters.] [8.4885e-07 err.] pagerankCuda [min-compute-size=5]
-[00005.741 ms; 056 iters.] [8.4885e-07 err.] pagerankCuda [min-compute-size=10]
-[00006.443 ms; 056 iters.] [8.4828e-07 err.] pagerankCuda [min-compute-size=50]
-[00006.385 ms; 056 iters.] [8.4891e-07 err.] pagerankCuda [min-compute-size=100]
-[00006.378 ms; 056 iters.] [8.4891e-07 err.] pagerankCuda [min-compute-size=500]
-[00006.380 ms; 056 iters.] [8.4891e-07 err.] pagerankCuda [min-compute-size=1000]
-[00006.377 ms; 056 iters.] [8.4891e-07 err.] pagerankCuda [min-compute-size=5000]
-[00006.385 ms; 056 iters.] [8.4891e-07 err.] pagerankCuda [min-compute-size=10000]
-[00006.373 ms; 056 iters.] [8.4891e-07 err.] pagerankCuda [min-compute-size=50000]
-[00003.675 ms; 056 iters.] [8.2613e-07 err.] pagerankCuda [min-compute-size=100000]
+[00006.883 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00005.637 ms; 056 iters.] [8.3902e-07 err.] pagerankCuda [min-compute=1]
+[00005.588 ms; 056 iters.] [8.3902e-07 err.] pagerankCuda [min-compute=5]
+[00005.633 ms; 056 iters.] [8.3902e-07 err.] pagerankCuda [min-compute=10]
+[00006.167 ms; 056 iters.] [8.3938e-07 err.] pagerankCuda [min-compute=50]
+[00006.268 ms; 056 iters.] [8.3988e-07 err.] pagerankCuda [min-compute=100]
+[00006.259 ms; 056 iters.] [8.3988e-07 err.] pagerankCuda [min-compute=500]
+[00006.387 ms; 056 iters.] [8.3988e-07 err.] pagerankCuda [min-compute=1000]
+[00006.361 ms; 056 iters.] [8.3988e-07 err.] pagerankCuda [min-compute=5000]
+[00006.362 ms; 056 iters.] [8.3988e-07 err.] pagerankCuda [min-compute=10000]
+[00007.225 ms; 056 iters.] [8.3988e-07 err.] pagerankCuda [min-compute=50000]
+[00004.079 ms; 056 iters.] [8.3489e-07 err.] pagerankCuda [min-compute=100000]
 
 Loading graph /home/subhajit/data/soc-Epinions1.mtx ...
 order: 75888 size: 508837 {}
 order: 75888 size: 508837 {} (transposeWithDegree)
-[00007.166 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00010.689 ms; 054 iters.] [1.3924e-06 err.] pagerankCuda [min-compute-size=1]
-[00010.700 ms; 054 iters.] [1.3923e-06 err.] pagerankCuda [min-compute-size=5]
-[00010.703 ms; 054 iters.] [1.3923e-06 err.] pagerankCuda [min-compute-size=10]
-[00003.874 ms; 054 iters.] [1.3926e-06 err.] pagerankCuda [min-compute-size=50]
-[00003.825 ms; 054 iters.] [1.3924e-06 err.] pagerankCuda [min-compute-size=100]
-[00003.787 ms; 054 iters.] [1.3865e-06 err.] pagerankCuda [min-compute-size=500]
-[00003.798 ms; 054 iters.] [1.3865e-06 err.] pagerankCuda [min-compute-size=1000]
-[00003.797 ms; 054 iters.] [1.3865e-06 err.] pagerankCuda [min-compute-size=5000]
-[00003.801 ms; 054 iters.] [1.3865e-06 err.] pagerankCuda [min-compute-size=10000]
-[00003.776 ms; 054 iters.] [1.3865e-06 err.] pagerankCuda [min-compute-size=50000]
-[00003.547 ms; 054 iters.] [1.4276e-06 err.] pagerankCuda [min-compute-size=100000]
+[00006.799 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00010.234 ms; 054 iters.] [1.4211e-06 err.] pagerankCuda [min-compute=1]
+[00010.222 ms; 054 iters.] [1.4211e-06 err.] pagerankCuda [min-compute=5]
+[00010.217 ms; 054 iters.] [1.4211e-06 err.] pagerankCuda [min-compute=10]
+[00003.641 ms; 054 iters.] [1.4200e-06 err.] pagerankCuda [min-compute=50]
+[00003.866 ms; 054 iters.] [1.4380e-06 err.] pagerankCuda [min-compute=100]
+[00004.484 ms; 054 iters.] [1.4149e-06 err.] pagerankCuda [min-compute=500]
+[00003.844 ms; 054 iters.] [1.4149e-06 err.] pagerankCuda [min-compute=1000]
+[00003.789 ms; 054 iters.] [1.4149e-06 err.] pagerankCuda [min-compute=5000]
+[00003.842 ms; 054 iters.] [1.4149e-06 err.] pagerankCuda [min-compute=10000]
+[00003.846 ms; 054 iters.] [1.4149e-06 err.] pagerankCuda [min-compute=50000]
+[00003.172 ms; 054 iters.] [1.3497e-06 err.] pagerankCuda [min-compute=100000]
 
 Loading graph /home/subhajit/data/coAuthorsDBLP.mtx ...
 order: 299067 size: 1955352 {}
 order: 299067 size: 1955352 {} (transposeWithDegree)
-[00007.827 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.804 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=1]
-[00003.802 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=5]
-[00003.797 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=10]
-[00003.806 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=50]
-[00003.803 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=100]
-[00003.766 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=500]
-[00003.700 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=1000]
-[00003.625 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=5000]
-[00003.629 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=10000]
-[00003.619 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=50000]
-[00003.643 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=100000]
-[00003.627 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=500000]
-[00003.633 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute-size=1000000]
+[00007.245 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00003.520 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=1]
+[00003.541 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=5]
+[00003.530 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=10]
+[00003.526 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=50]
+[00003.531 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=100]
+[00003.933 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=500]
+[00003.530 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=1000]
+[00003.526 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=5000]
+[00003.610 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=10000]
+[00003.624 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=50000]
+[00003.625 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=100000]
+[00003.628 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=500000]
+[00003.732 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/coAuthorsCiteseer.mtx ...
 order: 227320 size: 1628268 {}
 order: 227320 size: 1628268 {} (transposeWithDegree)
-[00006.933 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.552 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=1]
-[00003.546 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=5]
-[00003.557 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=10]
-[00003.557 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=50]
-[00003.566 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=100]
-[00003.865 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=500]
-[00003.547 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=1000]
-[00003.541 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=5000]
-[00003.561 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=10000]
-[00003.554 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=50000]
-[00003.552 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=100000]
-[00003.719 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=500000]
-[00003.543 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute-size=1000000]
+[00007.034 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00003.773 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=1]
+[00003.771 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=5]
+[00003.779 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=10]
+[00003.900 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=50]
+[00003.746 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=100]
+[00003.752 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=500]
+[00003.741 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=1000]
+[00003.783 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=5000]
+[00003.738 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=10000]
+[00003.835 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=50000]
+[00003.777 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=100000]
+[00003.797 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=500000]
+[00003.787 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 order: 4847571 size: 68993773 {}
 order: 4847571 size: 68993773 {} (transposeWithDegree)
-[00168.072 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00355.320 ms; 051 iters.] [3.1464e-06 err.] pagerankCuda [min-compute-size=1]
-[00359.799 ms; 051 iters.] [3.1664e-06 err.] pagerankCuda [min-compute-size=5]
-[00370.237 ms; 051 iters.] [3.1290e-06 err.] pagerankCuda [min-compute-size=10]
-[00213.362 ms; 051 iters.] [3.0922e-06 err.] pagerankCuda [min-compute-size=50]
-[00194.312 ms; 051 iters.] [3.1552e-06 err.] pagerankCuda [min-compute-size=100]
-[00190.662 ms; 051 iters.] [3.0660e-06 err.] pagerankCuda [min-compute-size=500]
-[00184.615 ms; 051 iters.] [3.0706e-06 err.] pagerankCuda [min-compute-size=1000]
-[00165.183 ms; 051 iters.] [3.1470e-06 err.] pagerankCuda [min-compute-size=5000]
-[00165.696 ms; 051 iters.] [3.1430e-06 err.] pagerankCuda [min-compute-size=10000]
-[00155.293 ms; 051 iters.] [3.2172e-06 err.] pagerankCuda [min-compute-size=50000]
-[00152.922 ms; 051 iters.] [3.1857e-06 err.] pagerankCuda [min-compute-size=100000]
-[00151.506 ms; 051 iters.] [3.1882e-06 err.] pagerankCuda [min-compute-size=500000]
-[00151.525 ms; 051 iters.] [3.1615e-06 err.] pagerankCuda [min-compute-size=1000000]
-[00151.800 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=5000000]
-[00151.167 ms; 051 iters.] [3.1055e-06 err.] pagerankCuda [min-compute-size=10000000]
+[00167.968 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00354.189 ms; 051 iters.] [3.0248e-06 err.] pagerankCuda [min-compute=1]
+[00359.688 ms; 051 iters.] [3.0147e-06 err.] pagerankCuda [min-compute=5]
+[00370.161 ms; 051 iters.] [3.0311e-06 err.] pagerankCuda [min-compute=10]
+[00215.243 ms; 051 iters.] [3.0474e-06 err.] pagerankCuda [min-compute=50]
+[00193.222 ms; 051 iters.] [3.0905e-06 err.] pagerankCuda [min-compute=100]
+[00190.736 ms; 051 iters.] [3.0432e-06 err.] pagerankCuda [min-compute=500]
+[00184.762 ms; 051 iters.] [3.0680e-06 err.] pagerankCuda [min-compute=1000]
+[00166.049 ms; 051 iters.] [3.0745e-06 err.] pagerankCuda [min-compute=5000]
+[00165.249 ms; 051 iters.] [3.0696e-06 err.] pagerankCuda [min-compute=10000]
+[00156.035 ms; 051 iters.] [3.0847e-06 err.] pagerankCuda [min-compute=50000]
+[00153.055 ms; 051 iters.] [3.0731e-06 err.] pagerankCuda [min-compute=100000]
+[00152.096 ms; 051 iters.] [3.0786e-06 err.] pagerankCuda [min-compute=500000]
+[00151.729 ms; 051 iters.] [3.0290e-06 err.] pagerankCuda [min-compute=1000000]
+[00150.901 ms; 051 iters.] [3.1235e-06 err.] pagerankCuda [min-compute=5000000]
+[00150.858 ms; 051 iters.] [3.1235e-06 err.] pagerankCuda [min-compute=10000000]
 
 Loading graph /home/subhajit/data/coPapersCiteseer.mtx ...
 order: 434102 size: 32073440 {}
 order: 434102 size: 32073440 {} (transposeWithDegree)
-[00026.140 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00036.209 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=1]
-[00036.049 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=5]
-[00036.052 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=10]
-[00036.037 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=50]
-[00036.048 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=100]
-[00036.055 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=500]
-[00036.057 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=1000]
-[00036.041 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=5000]
-[00036.055 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=10000]
-[00036.047 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=50000]
-[00036.048 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=100000]
-[00036.056 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=500000]
-[00036.047 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute-size=1000000]
+[00026.052 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00036.367 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=1]
+[00036.037 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=5]
+[00036.052 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=10]
+[00036.044 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=50]
+[00036.035 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=100]
+[00036.039 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=500]
+[00036.056 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=1000]
+[00036.038 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=5000]
+[00036.015 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=10000]
+[00036.055 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=50000]
+[00036.067 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=100000]
+[00036.052 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=500000]
+[00036.046 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/coPapersDBLP.mtx ...
 order: 540486 size: 30491458 {}
 order: 540486 size: 30491458 {} (transposeWithDegree)
-[00024.319 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00037.349 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=1]
-[00037.510 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=5]
-[00037.319 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=10]
-[00037.338 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=50]
-[00037.344 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=100]
-[00037.339 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=500]
-[00037.330 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=1000]
-[00037.333 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=5000]
-[00037.350 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=10000]
-[00037.334 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=50000]
-[00037.345 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=100000]
-[00037.339 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=500000]
-[00037.324 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute-size=1000000]
+[00024.624 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00037.397 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=1]
+[00037.395 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=5]
+[00038.177 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=10]
+[00037.399 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=50]
+[00037.945 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=100]
+[00037.366 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=500]
+[00037.409 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=1000]
+[00037.394 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=5000]
+[00037.413 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=10000]
+[00037.401 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=50000]
+[00037.403 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=100000]
+[00037.392 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=500000]
+[00037.410 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [min-compute=1000000]
 
 Loading graph /home/subhajit/data/indochina-2004.mtx ...
 order: 7414866 size: 194109311 {}
 order: 7414866 size: 194109311 {} (transposeWithDegree)
-[00193.923 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[04942.764 ms; 061 iters.] [1.8340e-06 err.] pagerankCuda [min-compute-size=1]
-[05180.669 ms; 061 iters.] [1.8463e-06 err.] pagerankCuda [min-compute-size=5]
-[05477.867 ms; 061 iters.] [1.8608e-06 err.] pagerankCuda [min-compute-size=10]
-[04635.455 ms; 061 iters.] [3.1644e-06 err.] pagerankCuda [min-compute-size=50]
-[04543.756 ms; 061 iters.] [2.9811e-06 err.] pagerankCuda [min-compute-size=100]
-[04561.392 ms; 061 iters.] [2.9363e-06 err.] pagerankCuda [min-compute-size=500]
-[04093.731 ms; 061 iters.] [2.6804e-06 err.] pagerankCuda [min-compute-size=1000]
-[02094.063 ms; 060 iters.] [2.1643e-06 err.] pagerankCuda [min-compute-size=5000]
-[01356.319 ms; 060 iters.] [2.1142e-06 err.] pagerankCuda [min-compute-size=10000]
-[00335.637 ms; 060 iters.] [1.8301e-06 err.] pagerankCuda [min-compute-size=50000]
-[00270.568 ms; 060 iters.] [1.8655e-06 err.] pagerankCuda [min-compute-size=100000]
-[00200.544 ms; 060 iters.] [1.7147e-06 err.] pagerankCuda [min-compute-size=500000]
-[00192.505 ms; 060 iters.] [1.8267e-06 err.] pagerankCuda [min-compute-size=1000000]
-[00156.592 ms; 060 iters.] [1.6720e-06 err.] pagerankCuda [min-compute-size=5000000]
-[00128.188 ms; 060 iters.] [1.8511e-06 err.] pagerankCuda [min-compute-size=10000000]
+[00193.480 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[04922.639 ms; 061 iters.] [1.9193e-06 err.] pagerankCuda [min-compute=1]
+[05160.124 ms; 061 iters.] [1.8816e-06 err.] pagerankCuda [min-compute=5]
+[05456.052 ms; 061 iters.] [1.8933e-06 err.] pagerankCuda [min-compute=10]
+[04633.333 ms; 061 iters.] [3.2037e-06 err.] pagerankCuda [min-compute=50]
+[04541.042 ms; 061 iters.] [2.8685e-06 err.] pagerankCuda [min-compute=100]
+[04560.728 ms; 061 iters.] [2.8938e-06 err.] pagerankCuda [min-compute=500]
+[04091.402 ms; 061 iters.] [2.5502e-06 err.] pagerankCuda [min-compute=1000]
+[02093.017 ms; 060 iters.] [2.0002e-06 err.] pagerankCuda [min-compute=5000]
+[01354.734 ms; 060 iters.] [2.0830e-06 err.] pagerankCuda [min-compute=10000]
+[00335.083 ms; 060 iters.] [1.8982e-06 err.] pagerankCuda [min-compute=50000]
+[00270.172 ms; 060 iters.] [1.6811e-06 err.] pagerankCuda [min-compute=100000]
+[00200.434 ms; 060 iters.] [1.7905e-06 err.] pagerankCuda [min-compute=500000]
+[00192.972 ms; 060 iters.] [1.7874e-06 err.] pagerankCuda [min-compute=1000000]
+[00155.005 ms; 060 iters.] [1.7093e-06 err.] pagerankCuda [min-compute=5000000]
+[00127.868 ms; 060 iters.] [1.9733e-06 err.] pagerankCuda [min-compute=10000000]
 
 Loading graph /home/subhajit/data/italy_osm.mtx ...
 order: 6686493 size: 14027956 {}
 order: 6686493 size: 14027956 {} (transposeWithDegree)
-[00062.176 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00026.864 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=1]
-[00027.076 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=5]
-[00026.857 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=10]
-[00026.887 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=50]
-[00027.009 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=100]
-[00026.878 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=500]
-[00026.844 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=1000]
-[00026.855 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=5000]
-[00026.898 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=10000]
-[00026.860 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=50000]
-[00026.857 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=100000]
-[00026.865 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=500000]
-[00026.865 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=1000000]
-[00026.877 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=5000000]
-[00026.842 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute-size=10000000]
+[00062.040 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00026.620 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=1]
+[00026.648 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=5]
+[00026.631 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=10]
+[00026.655 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=50]
+[00026.673 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=100]
+[00026.652 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=500]
+[00026.647 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=1000]
+[00026.613 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=5000]
+[00026.656 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=10000]
+[00026.659 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=50000]
+[00026.637 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=100000]
+[00026.647 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=500000]
+[00026.878 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=1000000]
+[00026.648 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=5000000]
+[00026.649 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [min-compute=10000000]
 
 Loading graph /home/subhajit/data/great-britain_osm.mtx ...
 order: 7733822 size: 16313034 {}
 order: 7733822 size: 16313034 {} (transposeWithDegree)
-[00076.419 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00032.575 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=1]
-[00032.590 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=5]
-[00032.588 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=10]
-[00032.558 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=50]
-[00032.592 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=100]
-[00032.587 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=500]
-[00032.599 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=1000]
-[00032.615 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=5000]
-[00032.582 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=10000]
-[00032.734 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=50000]
-[00032.581 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=100000]
-[00032.569 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=500000]
-[00032.555 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=1000000]
-[00032.592 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=5000000]
-[00032.574 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute-size=10000000]
+[00076.028 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00032.501 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=1]
+[00032.496 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=5]
+[00032.516 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=10]
+[00032.706 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=50]
+[00032.503 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=100]
+[00032.496 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=500]
+[00032.481 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=1000]
+[00032.484 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=5000]
+[00032.488 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=10000]
+[00032.518 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=50000]
+[00032.507 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=100000]
+[00032.502 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=500000]
+[00032.591 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=1000000]
+[00032.493 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=5000000]
+[00032.510 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [min-compute=10000000]
 
 Loading graph /home/subhajit/data/germany_osm.mtx ...
 order: 11548845 size: 24738362 {}
 order: 11548845 size: 24738362 {} (transposeWithDegree)
-[00113.835 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00046.454 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=1]
-[00046.417 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=5]
-[00046.445 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=10]
-[00046.447 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=50]
-[00046.440 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=100]
-[00046.535 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=500]
-[00046.434 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=1000]
-[00046.438 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=5000]
-[00046.431 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=10000]
-[00046.407 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=50000]
-[00046.419 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=100000]
-[00046.711 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=500000]
-[00046.457 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=1000000]
-[00046.445 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=5000000]
-[00046.792 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=10000000]
-[00046.415 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute-size=50000000]
+[00113.967 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00046.398 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=1]
+[00046.413 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=5]
+[00046.428 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=10]
+[00046.389 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=50]
+[00046.598 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=100]
+[00046.405 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=500]
+[00046.395 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=1000]
+[00046.417 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=5000]
+[00046.376 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=10000]
+[00046.398 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=50000]
+[00046.620 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=100000]
+[00046.405 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=500000]
+[00046.442 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=1000000]
+[00046.392 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=5000000]
+[00046.399 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=10000000]
+[00046.566 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [min-compute=50000000]
 
 Loading graph /home/subhajit/data/asia_osm.mtx ...
 order: 11950757 size: 25423206 {}
 order: 11950757 size: 25423206 {} (transposeWithDegree)
-[00107.937 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00045.381 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=1]
-[00045.395 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=5]
-[00045.370 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=10]
-[00045.379 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=50]
-[00045.400 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=100]
-[00045.384 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=500]
-[00045.577 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=1000]
-[00045.382 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=5000]
-[00045.393 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=10000]
-[00045.413 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=50000]
-[00045.389 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=100000]
-[00045.373 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=500000]
-[00045.373 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=1000000]
-[00045.410 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=5000000]
-[00045.385 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=10000000]
-[00045.583 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute-size=50000000]
+[00107.519 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+[00045.352 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=1]
+[00045.454 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=5]
+[00045.372 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=10]
+[00045.369 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=50]
+[00045.362 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=100]
+[00045.356 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=500]
+[00045.368 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=1000]
+[00045.345 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=5000]
+[00045.482 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=10000]
+[00045.352 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=50000]
+[00045.345 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=100000]
+[00045.345 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=500000]
+[00045.323 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=1000000]
+[00045.362 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=5000000]
+[00045.361 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=10000000]
+[00045.503 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [min-compute=50000000]
