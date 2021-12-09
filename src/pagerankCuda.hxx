@@ -7,6 +7,7 @@
 #include "vertices.hxx"
 #include "edges.hxx"
 #include "csr.hxx"
+#include "identicals.hxx"
 #include "pagerank.hxx"
 
 using std::array;
@@ -313,6 +314,7 @@ PagerankResult<T> pagerankCuda(const H& xt, const J& ks, int i, const M& ns, FL 
   int VFROM1 = vfrom.size() * sizeof(int);
   int EFROM1 = efrom.size() * sizeof(int);
   int VDATA1 = vdata.size() * sizeof(int);
+  int VROOT1 = vroot.size() * sizeof(int);
   int N1 = N * sizeof(T);
   int R1 = R * sizeof(T);
   vector<T> a(N), r(N), qc;

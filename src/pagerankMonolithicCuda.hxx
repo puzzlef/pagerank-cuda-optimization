@@ -57,8 +57,8 @@ int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD
 // @returns {ranks, iterations, time}
 template <class G, class H, class T=float>
 PagerankResult<T> pagerankMonolithicCuda(const G& x, const H& xt, const vector<T> *q=nullptr, PagerankOptions<T> o={}) {
-  int  N  = xt.order();                if (N==0) return PagerankResult<T>::initial(xt, q);
-  auto ks = pagerankCudaVertices(xt);
+  int  N  = xt.order();                   if (N==0) return PagerankResult<T>::initial(xt, q);
+  auto ks = pagerankCudaVertices(x, xt);
   auto ns = pagerankWave(xt, ks);
   return pagerankCuda(xt, ks, 0, ns, pagerankMonolithicCudaLoop<T, decltype(ns)>, q, o);
 }

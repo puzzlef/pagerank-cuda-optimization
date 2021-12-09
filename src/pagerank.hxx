@@ -13,28 +13,24 @@ using std::move;
 // -------------
 
 // For pagerank cuda block-per-vertex
-#define BLOCK_DIM_PRB 64
-#define GRID_DIM_PRB  GRID_LIMIT
+template <class T=float>
+constexpr int BLOCK_DIM_PRCB() noexcept { return 256; }
+template <class T=float>
+constexpr int GRID_DIM_PRCB()  noexcept { return GRID_LIMIT; }
 
-// For pagerank cuda thread-per-vertex (default)
-#define BLOCK_DIM_PRT 128
-#define GRID_DIM_PRT  8192
-
-// For pagerank cuda thread-per-vertex (low avg. density)
-#define BLOCK_DIM_PRT_LOWDENSITY 512
-#define GRID_DIM_PRT_LOWDENSITY  8192
-
-// For pagerank cuda thread-per-vertex (high avg. degree)
-#define BLOCK_DIM_PRT_HIGHDEGREE 32
-#define GRID_DIM_PRT_HIGHDEGREE  8192
-
-// For pagerank cuda switched (block approach)
-#define BLOCK_DIM_PRSB 256
-#define GRID_DIM_PRSB  GRID_LIMIT
-
-// For pagerank cuda switched (thread approach)
-#define BLOCK_DIM_PRST 512
-#define GRID_DIM_PRST  GRID_LIMIT
+// For pagerank cuda thread-per-vertex
+template <class T=float>
+constexpr int BLOCK_DIM_PRCT() noexcept { return 512; }
+template <class T=float>
+constexpr int GRID_DIM_PRCT()  noexcept { return GRID_LIMIT; }
+template <class T=float>
+constexpr int BLOCK_DIM_PRCT_LOWDENSITY() noexcept { return 512; }
+template <class T=float>
+constexpr int GRID_DIM_PRCT_LOWDENSITY()  noexcept { return 8192; }
+template <class T=float>
+constexpr int BLOCK_DIM_PRCT_HIGHDEGREE() noexcept { return 32; }
+template <class T=float>
+constexpr int GRID_DIM_PRCT_HIGHDEGREE()  noexcept { return 8192; }
 
 
 
@@ -42,15 +38,17 @@ using std::move;
 // OTHER CONFIG
 // ------------
 
-// For pagerank cuda switched ()
-#define SWITCH_DEGREE_PR 64
-#define SWITCH_LIMIT_PR  32
-#define MIN_COMPUTE_SIZE_PR_SEQ 10
-#define MIN_COMPUTE_SIZE_PR     5000000
+// For pagerank cuda
+template <class T=float>
+constexpr int SWITCH_DEGREE_PRC() noexcept { return 64; }
+template <class T=float>
+constexpr int SWITCH_LIMIT_PRC()  noexcept { return 32; }
 
 // For levelwise pagerank
-#define MIN_COMPUTE_SIZE_PRL_SEQ 10
-#define MIN_COMPUTE_SIZE_PRL     5000000
+template <class T=float>
+constexpr int MIN_COMPUTE_PR()  noexcept { return 1000000; }  // 10
+template <class T=float>
+constexpr int MIN_COMPUTE_PRC() noexcept { return 1000000; }  // 5000000
 
 
 
@@ -61,13 +59,14 @@ using std::move;
 template <class T>
 struct PagerankOptions {
   int  repeat;
-  bool skipInidenticals;
+  int  toleranceNorm;
+  int  skipInidenticals;
   T    damping;
   T    tolerance;
   int  maxIterations;
 
-  PagerankOptions(int repeat=1, bool skipInidenticals=false, T damping=0.85, T tolerance=1e-6, int maxIterations=500) :
-  repeat(repeat), skipInidenticals(skipInidenticals), damping(damping), tolerance(tolerance), maxIterations(maxIterations) {}
+  PagerankOptions(int repeat=1, int toleranceNorm=1, int skipInidenticals=0, T damping=0.85, T tolerance=1e-6, int maxIterations=500) :
+  repeat(repeat), toleranceNorm(toleranceNorm), skipInidenticals(skipInidenticals), damping(damping), tolerance(tolerance), maxIterations(maxIterations) {}
 };
 
 
@@ -87,4 +86,14 @@ struct PagerankResult {
 
   PagerankResult(vector<T>& ranks, int iterations=0, float time=0) :
   ranks(move(ranks)), iterations(iterations), time(time) {}
+
+
+  // Get initial ranks (when no vertices affected for dynamic pagerank).
+  template <class G>
+  static PagerankResult<T> initial(const G& x, const vector<T>* q=nullptr) {
+    int  N = x.order();
+    auto a = q? *q : createContainer(x, T());
+    if (!q) fillAt(a, T(1)/N, x.vertices());
+    return {a, 0, 0};
+  }
 };
