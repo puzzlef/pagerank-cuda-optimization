@@ -60,13 +60,14 @@ template <class T>
 struct PagerankOptions {
   int  repeat;
   int  toleranceNorm;
-  int  skipInidenticals;
+  int  skipCheck;
+  int  skipAfter;
   T    damping;
   T    tolerance;
   int  maxIterations;
 
-  PagerankOptions(int repeat=1, int toleranceNorm=1, int skipInidenticals=0, T damping=0.85, T tolerance=1e-6, int maxIterations=500) :
-  repeat(repeat), toleranceNorm(toleranceNorm), skipInidenticals(skipInidenticals), damping(damping), tolerance(tolerance), maxIterations(maxIterations) {}
+  PagerankOptions(int repeat=1, int toleranceNorm=1, int skipCheck=0, int skipAfter=0, T damping=0.85, T tolerance=1e-6, int maxIterations=500) :
+  repeat(repeat), toleranceNorm(toleranceNorm), skipCheck(skipCheck), skipAfter(skipAfter), damping(damping), tolerance(tolerance), maxIterations(maxIterations) {}
 };
 
 

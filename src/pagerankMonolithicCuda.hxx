@@ -22,7 +22,7 @@ using std::max;
 // -------------
 
 template <class T, class J>
-int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD, const T *fD, const int *vfromD, const int *efromD, const int *vdataD, const int *vrootD, int i, const J& ns, int N, T p, T E, int L, int EF) {
+int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, int *sD, T *cD, const T *fD, const int *vfromD, const int *efromD, const int *vdataD, const int *vrootD, int i, const J& ns, int N, T p, T E, int L, int EF, int SC, int SA) {
   int n = sumAbs(ns);
   int R = reduceSizeCu<T>(n);
   size_t R1 = R * sizeof(T);
@@ -31,14 +31,13 @@ int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD
     sumIfNotCu(r0D, rD, vdataD, N);
     TRY( cudaMemcpy(r0, r0D, R1, cudaMemcpyDeviceToHost) );
     T c0 = (1-p)/N + p*sum(r0, R)/N;
-    pagerankSwitchedCu(aD, cD, vfromD, efromD, i, ns, c0);  // assume contribtions (cD) is precalculated
-    if (vrootD) pagerankIdenticalsCu(aD, vrootD, i, n);
+    pagerankSwitchedCu(aD, sD, rD, cD, vfromD, efromD, i, ns, l, SC, SA, c0);  // assume contribtions (cD) is precalculated
     pagerankErrorCu(eD, aD+i, rD+i, n, EF);
     TRY( cudaMemcpy(e, eD, R1, cudaMemcpyDeviceToHost) );
-    T el = pagerankErrorReduce(e, R, EF); ++l;              // one iteration complete
-    if (el<E || l>=L) break;                                // check tolerance, iteration limit
-    multiplyCu(cD+i, aD+i, fD+i, n);                        // update partial contributions (cD)
-    swap(aD, rD);                                           // final ranks always in (aD)
+    T el = pagerankErrorReduce(e, R, EF); ++l;                                 // one iteration complete
+    if (el<E || l>=L) break;                                                   // check tolerance, iteration limit
+    multiplyCu(cD+i, aD+i, fD+i, n);                                           // update partial contributions (cD)
+    swap(aD, rD);                                                              // final ranks always in (aD)
   }
   return l;
 }
