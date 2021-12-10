@@ -1,167 +1,272 @@
 Loading graph /home/subhajit/data/min-1DeadEnd.mtx ...
 order: 5 size: 6 {}
 order: 5 size: 6 {} (transposeWithDegree)
-chains: 1 chain-vertices: 1 {}
-[00001.735 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00000.540 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda
-[00000.538 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [skip]
+[00000.640 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda
+[00000.672 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00000.678 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00000.643 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00000.649 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00000.643 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00000.666 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00000.688 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00000.663 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/min-2SCC.mtx ...
 order: 8 size: 12 {}
 order: 8 size: 12 {} (transposeWithDegree)
-chains: 2 chain-vertices: 3 {}
-[00003.810 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00001.387 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda
-[00001.510 ms; 040 iters.] [9.0525e-07 err.] pagerankCuda [skip]
+[00001.413 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda
+[00001.459 ms; 040 iters.] [7.4506e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00000002; chains=00000001]
+[00001.462 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00001.484 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00001.482 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00001.488 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00001.456 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00001.459 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00001.461 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/min-4SCC.mtx ...
 order: 21 size: 35 {}
 order: 21 size: 35 {} (transposeWithDegree)
-chains: 1 chain-vertices: 1 {}
-[00004.578 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00001.520 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda
-[00001.383 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [skip]
+[00001.515 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda
+[00001.734 ms; 045 iters.] [2.2352e-08 err.] pagerankCuda [skip-chains=002; chain-vertices=00000006; chains=00000003]
+[00001.517 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00001.538 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00001.473 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00001.562 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00001.562 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00001.588 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00001.577 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/min-NvgraphEx.mtx ...
 order: 6 size: 10 {}
 order: 6 size: 10 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00002.794 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00000.739 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda
-[00000.774 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [skip]
+[00000.913 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda
+[00000.954 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00000.941 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00000.928 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00000.958 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00000.957 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00000.931 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00000.925 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00000.936 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/web-Stanford.mtx ...
 order: 281903 size: 2312497 {}
 order: 281903 size: 2312497 {} (transposeWithDegree)
-chains: 3618 chain-vertices: 3885 {}
-[00011.661 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00011.353 ms; 063 iters.] [7.0095e-07 err.] pagerankCuda
-[00018.701 ms; 063 iters.] [6.9988e-07 err.] pagerankCuda [skip]
+[00011.371 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+[00011.726 ms; 063 iters.] [2.5968e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00001265; chains=00000575]
+[00011.673 ms; 063 iters.] [9.5497e-12 err.] pagerankCuda [skip-chains=004; chain-vertices=00000051; chains=00000002]
+[00011.697 ms; 063 iters.] [9.5497e-12 err.] pagerankCuda [skip-chains=008; chain-vertices=00000051; chains=00000002]
+[00011.992 ms; 063 iters.] [9.5497e-12 err.] pagerankCuda [skip-chains=016; chain-vertices=00000051; chains=00000002]
+[00011.948 ms; 063 iters.] [7.5033e-12 err.] pagerankCuda [skip-chains=032; chain-vertices=00000034; chains=00000001]
+[00011.873 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00011.860 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00011.853 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/web-BerkStan.mtx ...
 order: 685230 size: 7600595 {}
 order: 685230 size: 7600595 {} (transposeWithDegree)
-chains: 7748 chain-vertices: 8671 {}
-[00015.957 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00021.969 ms; 064 iters.] [9.8529e-07 err.] pagerankCuda
-[00028.722 ms; 064 iters.] [9.8780e-07 err.] pagerankCuda [skip]
+[00022.952 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda
+[00022.468 ms; 064 iters.] [3.8028e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00003045; chains=00001319]
+[00022.333 ms; 064 iters.] [2.0979e-09 err.] pagerankCuda [skip-chains=004; chain-vertices=00000266; chains=00000024]
+[00022.298 ms; 064 iters.] [1.3598e-09 err.] pagerankCuda [skip-chains=008; chain-vertices=00000197; chains=00000010]
+[00022.318 ms; 064 iters.] [9.9570e-10 err.] pagerankCuda [skip-chains=016; chain-vertices=00000142; chains=00000005]
+[00022.284 ms; 064 iters.] [8.1570e-12 err.] pagerankCuda [skip-chains=032; chain-vertices=00000054; chains=00000001]
+[00022.269 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00022.280 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00022.279 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/web-Google.mtx ...
 order: 916428 size: 5105039 {}
 order: 916428 size: 5105039 {} (transposeWithDegree)
-chains: 12381 chain-vertices: 12766 {}
-[00019.699 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00012.990 ms; 062 iters.] [1.2688e-06 err.] pagerankCuda
-[00019.573 ms; 062 iters.] [1.2687e-06 err.] pagerankCuda [skip]
+[00013.174 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda
+[00013.909 ms; 062 iters.] [1.7485e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00002747; chains=00001330]
+[00013.787 ms; 062 iters.] [2.3289e-10 err.] pagerankCuda [skip-chains=004; chain-vertices=00000022; chains=00000004]
+[00013.791 ms; 062 iters.] [1.8463e-10 err.] pagerankCuda [skip-chains=008; chain-vertices=00000009; chains=00000001]
+[00013.728 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00013.708 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00013.732 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00013.693 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00013.695 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/web-NotreDame.mtx ...
 order: 325729 size: 1497134 {}
 order: 325729 size: 1497134 {} (transposeWithDegree)
-chains: 2100 chain-vertices: 2513 {}
-[00008.577 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00006.095 ms; 058 iters.] [2.5289e-06 err.] pagerankCuda
-[00012.180 ms; 058 iters.] [2.5163e-06 err.] pagerankCuda [skip]
+[00006.120 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda
+[00006.449 ms; 058 iters.] [6.6865e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00000982; chains=00000491]
+[00006.435 ms; 058 iters.] [6.5628e-09 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00006.425 ms; 058 iters.] [9.5116e-09 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00006.441 ms; 058 iters.] [9.5116e-09 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00006.317 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00006.358 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00006.351 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00006.351 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/soc-Slashdot0811.mtx ...
 order: 77360 size: 905468 {}
 order: 77360 size: 905468 {} (transposeWithDegree)
-chains: 5 chain-vertices: 5 {}
-[00006.750 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.582 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda
-[00009.280 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [skip]
+[00003.455 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.611 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00003.606 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00003.621 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00003.617 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00003.614 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00003.622 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00003.604 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00003.605 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/soc-Slashdot0902.mtx ...
 order: 82168 size: 948464 {}
 order: 82168 size: 948464 {} (transposeWithDegree)
-chains: 4 chain-vertices: 4 {}
-[00007.113 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00004.290 ms; 056 iters.] [8.2736e-07 err.] pagerankCuda
-[00009.455 ms; 056 iters.] [8.2736e-07 err.] pagerankCuda [skip]
+[00003.513 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.711 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00003.720 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00003.693 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00003.700 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00003.693 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00003.706 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00003.689 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00003.701 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/soc-Epinions1.mtx ...
 order: 75888 size: 508837 {}
 order: 75888 size: 508837 {} (transposeWithDegree)
-chains: 736 chain-vertices: 751 {}
-[00006.932 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.388 ms; 054 iters.] [1.4007e-06 err.] pagerankCuda
-[00009.112 ms; 054 iters.] [1.4007e-06 err.] pagerankCuda [skip]
+[00003.179 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.535 ms; 054 iters.] [3.9386e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00001112; chains=00000554]
+[00003.480 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00003.486 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00003.487 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00003.440 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00003.465 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00003.480 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00003.483 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/coAuthorsDBLP.mtx ...
 order: 299067 size: 1955352 {}
 order: 299067 size: 1955352 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00007.408 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.626 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda
-[00008.303 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [skip]
+[00003.565 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.826 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00003.836 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00003.832 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00003.832 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00003.830 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00003.838 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00003.821 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00003.850 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/coAuthorsCiteseer.mtx ...
 order: 227320 size: 1628268 {}
 order: 227320 size: 1628268 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00006.926 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.844 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda
-[00009.250 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [skip]
+[00003.694 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.805 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00003.827 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00003.829 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00003.805 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00003.790 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00003.803 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00003.867 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00003.881 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 order: 4847571 size: 68993773 {}
 order: 4847571 size: 68993773 {} (transposeWithDegree)
-chains: 15788 chain-vertices: 16297 {}
-[00168.216 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00157.440 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda
-[00162.438 ms; 051 iters.] [3.2207e-06 err.] pagerankCuda [skip]
+[00157.950 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda
+[00160.251 ms; 051 iters.] [3.9981e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00015182; chains=00007435]
+[00158.980 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000008; chains=00000002]
+[00159.280 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00158.992 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00158.958 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00159.059 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00159.376 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00158.963 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/coPapersCiteseer.mtx ...
 order: 434102 size: 32073440 {}
 order: 434102 size: 32073440 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00025.404 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00036.423 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda
-[00041.718 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [skip]
+[00036.482 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda
+[00036.714 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00036.712 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00036.699 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00036.698 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00036.702 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00036.694 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00036.706 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00036.719 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/coPapersDBLP.mtx ...
 order: 540486 size: 30491458 {}
 order: 540486 size: 30491458 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00024.683 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00038.332 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda
-[00043.489 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [skip]
+[00040.588 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda
+[00038.180 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00038.046 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00038.000 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00038.020 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00038.030 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00038.031 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00038.061 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00038.024 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/indochina-2004.mtx ...
 order: 7414866 size: 194109311 {}
 order: 7414866 size: 194109311 {} (transposeWithDegree)
-chains: 110930 chain-vertices: 116156 {}
-[00194.213 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00123.652 ms; 060 iters.] [1.7991e-06 err.] pagerankCuda
-[00129.132 ms; 060 iters.] [1.7987e-06 err.] pagerankCuda [skip]
+[00123.246 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda
+[00127.022 ms; 060 iters.] [4.1074e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00021596; chains=00010509]
+[00125.393 ms; 060 iters.] [2.5942e-09 err.] pagerankCuda [skip-chains=004; chain-vertices=00000632; chains=00000115]
+[00125.370 ms; 060 iters.] [1.2028e-09 err.] pagerankCuda [skip-chains=008; chain-vertices=00000148; chains=00000016]
+[00125.669 ms; 060 iters.] [5.3113e-12 err.] pagerankCuda [skip-chains=016; chain-vertices=00000016; chains=00000001]
+[00125.326 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00125.345 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00126.221 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00125.351 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/italy_osm.mtx ...
 order: 6686493 size: 14027956 {}
 order: 6686493 size: 14027956 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00062.145 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00030.248 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda
-[00036.873 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda [skip]
+[00030.108 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+[00032.806 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00032.846 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00032.829 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00033.183 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00032.869 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00032.818 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00032.829 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00032.816 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/great-britain_osm.mtx ...
 order: 7733822 size: 16313034 {}
 order: 7733822 size: 16313034 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00076.882 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00039.687 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda
-[00046.684 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda [skip]
+[00039.454 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda
+[00042.870 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00042.848 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00043.024 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00042.882 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00042.872 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00042.865 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00042.893 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00042.848 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/germany_osm.mtx ...
 order: 11548845 size: 24738362 {}
 order: 11548845 size: 24738362 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00114.422 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00062.266 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda
-[00069.123 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda [skip]
+[00061.964 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda
+[00066.777 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00066.796 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00066.772 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00066.788 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00066.809 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00066.922 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00066.781 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00066.787 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 
 Loading graph /home/subhajit/data/asia_osm.mtx ...
 order: 11950757 size: 25423206 {}
 order: 11950757 size: 25423206 {} (transposeWithDegree)
-chains: 0 chain-vertices: 0 {}
-[00108.391 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00051.783 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda
-[00058.309 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda [skip]
+[00051.524 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+[00056.206 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=002; chain-vertices=00000000; chains=00000000]
+[00056.199 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000000; chains=00000000]
+[00056.200 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+[00056.213 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+[00056.183 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+[00056.175 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+[00056.186 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+[00056.473 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]

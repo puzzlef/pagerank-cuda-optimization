@@ -4,8 +4,7 @@ const path = require('path');
 
 const RGRAPH = /^Loading graph .*\/(.+?)\.mtx \.\.\./m;
 const RORDER = /^order: (\d+) size: (\d+) \{\}$/m;
-const RCHAIN = /^chains: (\d+) chain-vertices: (\d+) \{\}$/m;
-const RRESLT = /^\[(.+?) ms; (\d+) iters\.\] \[(.+?) err\.\] (.+)/m;
+const RRESLT = /^\[(.+?) ms; (\d+) iters\.\] \[(.+?) err\.\] (\w+)(?: \[skip-chains=(\d+); chain-vertices=(\d+); chains=(\d+)\])?/m;
 
 
 
@@ -54,18 +53,16 @@ function readLogLine(ln, data, state) {
     state.order = parseFloat(order);
     state.size  = parseFloat(size);
   }
-  else if (RCHAIN.test(ln)) {
-    var [, chains, chain_vertices] = RCHAIN.exec(ln);
-    state.chains         = parseFloat(chains);
-    state.chain_vertices = parseFloat(chain_vertices);
-  }
   else if (RRESLT.test(ln)) {
-    var [, time, iterations, error, technique] = RRESLT.exec(ln);
+    var [, time, iterations, error, technique, skip_chains, chain_vertices, chains] = RRESLT.exec(ln);
     data.get(state.graph).push(Object.assign({}, state, {
       time:       parseFloat(time),
       iterations: parseFloat(iterations),
       error:      parseFloat(error),
-      technique
+      technique,
+      skip_chains:    parseFloat(skip_chains||'0'),
+      chain_vertices: parseFloat(chain_vertices||'0'),
+      chains:         parseFloat(chains||'0')
     }));
   }
   return state;

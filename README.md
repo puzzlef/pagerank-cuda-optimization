@@ -34,20 +34,30 @@ $ ...
 # Loading graph /home/subhajit/data/web-Stanford.mtx ...
 # order: 281903 size: 2312497 {}
 # order: 281903 size: 2312497 {} (transposeWithDegree)
-# chains: 3618 chain-vertices: 3885 {}
-# [00011.661 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00011.353 ms; 063 iters.] [7.0095e-07 err.] pagerankCuda
-# [00018.701 ms; 063 iters.] [6.9988e-07 err.] pagerankCuda [skip]
+# [00011.371 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+# [00011.726 ms; 063 iters.] [2.5968e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00001265; chains=00000575]
+# [00011.673 ms; 063 iters.] [9.5497e-12 err.] pagerankCuda [skip-chains=004; chain-vertices=00000051; chains=00000002]
+# [00011.697 ms; 063 iters.] [9.5497e-12 err.] pagerankCuda [skip-chains=008; chain-vertices=00000051; chains=00000002]
+# [00011.992 ms; 063 iters.] [9.5497e-12 err.] pagerankCuda [skip-chains=016; chain-vertices=00000051; chains=00000002]
+# [00011.948 ms; 063 iters.] [7.5033e-12 err.] pagerankCuda [skip-chains=032; chain-vertices=00000034; chains=00000001]
+# [00011.873 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+# [00011.860 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+# [00011.853 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 #
 # ...
 #
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# chains: 15788 chain-vertices: 16297 {}
-# [00168.216 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00157.440 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda
-# [00162.438 ms; 051 iters.] [3.2207e-06 err.] pagerankCuda [skip]
+# [00157.950 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda
+# [00160.251 ms; 051 iters.] [3.9981e-09 err.] pagerankCuda [skip-chains=002; chain-vertices=00015182; chains=00007435]
+# [00158.980 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=004; chain-vertices=00000008; chains=00000002]
+# [00159.280 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=008; chain-vertices=00000000; chains=00000000]
+# [00158.992 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=016; chain-vertices=00000000; chains=00000000]
+# [00158.958 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=032; chain-vertices=00000000; chains=00000000]
+# [00159.059 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=064; chain-vertices=00000000; chains=00000000]
+# [00159.376 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=128; chain-vertices=00000000; chains=00000000]
+# [00158.963 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-chains=256; chain-vertices=00000000; chains=00000000]
 #
 # ...
 ```
