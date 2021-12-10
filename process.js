@@ -4,8 +4,7 @@ const path = require('path');
 
 const RGRAPH = /^Loading graph .*\/(.+?)\.mtx \.\.\./m;
 const RORDER = /^order: (\d+) size: (\d+) \{\}$/m;
-const RIDENT = /^inidenticals: (\d+) inidentical-groups: (\d+) \{\}$/m;
-const RRESLT = /^\[(.+?) ms; (\d+) iters\.\] \[(.+?) err\.\] (.+)/m;
+const RRESLT = /^\[(.+?) ms; (\d+) iters\.\] \[(.+?) err\.\] (\w+)(?: \[skip-inidenticals=(\d+); inidenticals=(\d+); inidentical-groups=(\d+)\])?/m;
 
 
 
@@ -54,18 +53,16 @@ function readLogLine(ln, data, state) {
     state.order = parseFloat(order);
     state.size  = parseFloat(size);
   }
-  else if (RIDENT.test(ln)) {
-    var [, inidenticals, inidentical_groups] = RIDENT.exec(ln);
-    state.inidenticals       = parseFloat(inidenticals);
-    state.inidentical_groups = parseFloat(inidentical_groups);
-  }
   else if (RRESLT.test(ln)) {
-    var [, time, iterations, error, technique] = RRESLT.exec(ln);
+    var [, time, iterations, error, technique, skip_inidenticals, inidenticals, inidentical_groups] = RRESLT.exec(ln);
     data.get(state.graph).push(Object.assign({}, state, {
       time:       parseFloat(time),
       iterations: parseFloat(iterations),
       error:      parseFloat(error),
-      technique
+      technique,
+      skip_inidenticals:  parseFloat(skip_inidenticals||'0'),
+      inidenticals:       parseFloat(inidenticals||'0'),
+      inidentical_groups: parseFloat(inidentical_groups||'0')
     }));
   }
   return state;

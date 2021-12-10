@@ -1,167 +1,272 @@
 Loading graph /home/subhajit/data/min-1DeadEnd.mtx ...
 order: 5 size: 6 {}
 order: 5 size: 6 {} (transposeWithDegree)
-inidenticals: 2 inidentical-groups: 1 {}
-[00001.883 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00000.513 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda
-[00000.566 ms; 017 iters.] [1.3411e-07 err.] pagerankCuda [skip]
+[00000.628 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda
+[00000.681 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000002; inidentical-groups=00000001]
+[00000.634 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000000; inidentical-groups=00000000]
+[00000.658 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00000.654 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00000.654 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00000.638 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00000.660 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00000.665 ms; 017 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/min-2SCC.mtx ...
 order: 8 size: 12 {}
 order: 8 size: 12 {} (transposeWithDegree)
-inidenticals: 0 inidentical-groups: 0 {}
-[00004.198 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00001.148 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda
-[00001.232 ms; 040 iters.] [9.1270e-07 err.] pagerankCuda [skip]
+[00001.425 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda
+[00001.465 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000000; inidentical-groups=00000000]
+[00001.496 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000000; inidentical-groups=00000000]
+[00001.468 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00001.491 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00001.483 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00001.472 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00001.478 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00001.467 ms; 040 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/min-4SCC.mtx ...
 order: 21 size: 35 {}
 order: 21 size: 35 {} (transposeWithDegree)
-inidenticals: 0 inidentical-groups: 0 {}
-[00005.196 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00001.385 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda
-[00001.474 ms; 045 iters.] [6.1188e-07 err.] pagerankCuda [skip]
+[00001.587 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda
+[00001.674 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000000; inidentical-groups=00000000]
+[00001.664 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000000; inidentical-groups=00000000]
+[00001.690 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00001.663 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00001.687 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00001.661 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00001.706 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00001.643 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/min-NvgraphEx.mtx ...
 order: 6 size: 10 {}
 order: 6 size: 10 {} (transposeWithDegree)
-inidenticals: 0 inidentical-groups: 0 {}
-[00002.499 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00000.847 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda
-[00000.920 ms; 024 iters.] [2.9802e-08 err.] pagerankCuda [skip]
+[00000.923 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda
+[00000.963 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000000; inidentical-groups=00000000]
+[00000.988 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000000; inidentical-groups=00000000]
+[00000.971 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00000.959 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00000.958 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00000.979 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00000.994 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00000.977 ms; 024 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/web-Stanford.mtx ...
 order: 281903 size: 2312497 {}
 order: 281903 size: 2312497 {} (transposeWithDegree)
-inidenticals: 80096 inidentical-groups: 13684 {}
-[00012.125 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00011.352 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
-[00018.499 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [skip]
+[00011.356 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+[00011.487 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00100411; inidentical-groups=00013685]
+[00011.480 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00081602; inidentical-groups=00005358]
+[00011.943 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00068989; inidentical-groups=00002814]
+[00011.597 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00042289; inidentical-groups=00000621]
+[00011.611 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00033030; inidentical-groups=00000210]
+[00011.566 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00026535; inidentical-groups=00000066]
+[00011.578 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00022136; inidentical-groups=00000013]
+[00011.568 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00020315; inidentical-groups=00000001]
 
 Loading graph /home/subhajit/data/web-BerkStan.mtx ...
 order: 685230 size: 7600595 {}
 order: 685230 size: 7600595 {} (transposeWithDegree)
-inidenticals: 234190 inidentical-groups: 43599 {}
-[00016.250 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00023.025 ms; 064 iters.] [9.8034e-07 err.] pagerankCuda
-[00028.708 ms; 064 iters.] [1.1651e-06 err.] pagerankCuda [skip]
+[00023.002 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda
+[00022.388 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00302322; inidentical-groups=00043598]
+[00022.349 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00235734; inidentical-groups=00014603]
+[00022.349 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00197766; inidentical-groups=00007210]
+[00022.382 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00135297; inidentical-groups=00002019]
+[00022.353 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00102676; inidentical-groups=00000563]
+[00022.364 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00085790; inidentical-groups=00000176]
+[00022.357 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00073543; inidentical-groups=00000033]
+[00022.392 ms; 064 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00068136; inidentical-groups=00000001]
 
 Loading graph /home/subhajit/data/web-Google.mtx ...
 order: 916428 size: 5105039 {}
 order: 916428 size: 5105039 {} (transposeWithDegree)
-inidenticals: 301399 inidentical-groups: 73849 {}
-[00019.835 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00012.835 ms; 062 iters.] [1.2689e-06 err.] pagerankCuda
-[00019.870 ms; 062 iters.] [1.2689e-06 err.] pagerankCuda [skip]
+[00013.158 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda
+[00014.167 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00503282; inidentical-groups=00073850]
+[00014.091 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00400274; inidentical-groups=00029429]
+[00014.090 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00293795; inidentical-groups=00008335]
+[00014.084 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00218209; inidentical-groups=00000911]
+[00015.020 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00202231; inidentical-groups=00000008]
+[00015.021 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00201969; inidentical-groups=00000002]
+[00014.141 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00201883; inidentical-groups=00000001]
+[00014.118 ms; 062 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00201883; inidentical-groups=00000001]
 
 Loading graph /home/subhajit/data/web-NotreDame.mtx ...
 order: 325729 size: 1497134 {}
 order: 325729 size: 1497134 {} (transposeWithDegree)
-inidenticals: 225252 inidentical-groups: 23318 {}
-[00009.138 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00006.149 ms; 058 iters.] [2.5289e-06 err.] pagerankCuda
-[00012.255 ms; 058 iters.] [2.5289e-06 err.] pagerankCuda [skip]
+[00006.198 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda
+[00006.443 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00225252; inidentical-groups=00023318]
+[00006.442 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00200923; inidentical-groups=00012848]
+[00006.444 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00165994; inidentical-groups=00006050]
+[00006.457 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00127620; inidentical-groups=00002353]
+[00006.476 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00096767; inidentical-groups=00000889]
+[00006.459 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00074905; inidentical-groups=00000381]
+[00006.463 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00056126; inidentical-groups=00000163]
+[00006.464 ms; 058 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00038502; inidentical-groups=00000065]
 
 Loading graph /home/subhajit/data/soc-Slashdot0811.mtx ...
 order: 77360 size: 905468 {}
 order: 77360 size: 905468 {} (transposeWithDegree)
-inidenticals: 473 inidentical-groups: 227 {}
-[00006.668 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.609 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda
-[00009.365 ms; 055 iters.] [9.0883e-07 err.] pagerankCuda [skip]
+[00003.393 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.509 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000473; inidentical-groups=00000227]
+[00003.525 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000018; inidentical-groups=00000003]
+[00003.507 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00003.492 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00003.488 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00003.533 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00003.484 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00003.487 ms; 055 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/soc-Slashdot0902.mtx ...
 order: 82168 size: 948464 {}
 order: 82168 size: 948464 {} (transposeWithDegree)
-inidenticals: 616 inidentical-groups: 295 {}
-[00006.946 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.648 ms; 056 iters.] [8.2736e-07 err.] pagerankCuda
-[00009.458 ms; 056 iters.] [8.2736e-07 err.] pagerankCuda [skip]
+[00003.536 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.669 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000616; inidentical-groups=00000295]
+[00003.667 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000027; inidentical-groups=00000005]
+[00003.681 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00003.691 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00003.625 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00003.650 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00003.646 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00003.639 ms; 056 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/soc-Epinions1.mtx ...
 order: 75888 size: 508837 {}
 order: 75888 size: 508837 {} (transposeWithDegree)
-inidenticals: 16924 inidentical-groups: 3904 {}
-[00006.905 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.323 ms; 054 iters.] [1.4007e-06 err.] pagerankCuda
-[00009.021 ms; 054 iters.] [1.4007e-06 err.] pagerankCuda [skip]
+[00003.054 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.270 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00040855; inidentical-groups=00003905]
+[00003.236 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00034469; inidentical-groups=00001085]
+[00003.296 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00030743; inidentical-groups=00000324]
+[00003.315 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00028560; inidentical-groups=00000109]
+[00003.271 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00027043; inidentical-groups=00000039]
+[00003.567 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00026000; inidentical-groups=00000014]
+[00003.564 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00025601; inidentical-groups=00000009]
+[00003.246 ms; 054 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00024373; inidentical-groups=00000002]
 
 Loading graph /home/subhajit/data/coAuthorsDBLP.mtx ...
 order: 299067 size: 1955352 {}
 order: 299067 size: 1955352 {} (transposeWithDegree)
-inidenticals: 32219 inidentical-groups: 11965 {}
-[00007.467 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.677 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda
-[00008.325 ms; 045 iters.] [2.9323e-06 err.] pagerankCuda [skip]
+[00003.597 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.931 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00032219; inidentical-groups=00011965]
+[00003.811 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00009897; inidentical-groups=00001902]
+[00003.790 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00001784; inidentical-groups=00000185]
+[00003.795 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000033; inidentical-groups=00000002]
+[00003.783 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00003.792 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00003.783 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00003.799 ms; 045 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/coAuthorsCiteseer.mtx ...
 order: 227320 size: 1628268 {}
 order: 227320 size: 1628268 {} (transposeWithDegree)
-inidenticals: 18909 inidentical-groups: 7346 {}
-[00006.899 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00003.649 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda
-[00008.747 ms; 048 iters.] [2.1887e-06 err.] pagerankCuda [skip]
+[00003.635 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda
+[00003.761 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00018909; inidentical-groups=00007346]
+[00003.788 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00004790; inidentical-groups=00000920]
+[00003.790 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000842; inidentical-groups=00000074]
+[00003.774 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000230; inidentical-groups=00000008]
+[00003.751 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000103; inidentical-groups=00000001]
+[00003.814 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000103; inidentical-groups=00000001]
+[00003.752 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00003.713 ms; 048 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 order: 4847571 size: 68993773 {}
 order: 4847571 size: 68993773 {} (transposeWithDegree)
-inidenticals: 556210 inidentical-groups: 203669 {}
-[00168.124 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00158.059 ms; 051 iters.] [3.2208e-06 err.] pagerankCuda
-[00166.893 ms; 051 iters.] [3.2467e-06 err.] pagerankCuda [skip]
+[00156.449 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda
+[00163.209 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00914539; inidentical-groups=00203669]
+[00161.975 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00520954; inidentical-groups=00025620]
+[00161.918 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00418530; inidentical-groups=00003613]
+[00161.633 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00391550; inidentical-groups=00000936]
+[00162.428 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00378344; inidentical-groups=00000316]
+[00161.693 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00369064; inidentical-groups=00000096]
+[00162.415 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00362503; inidentical-groups=00000021]
+[00161.733 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00359326; inidentical-groups=00000004]
 
 Loading graph /home/subhajit/data/coPapersCiteseer.mtx ...
 order: 434102 size: 32073440 {}
 order: 434102 size: 32073440 {} (transposeWithDegree)
-inidenticals: 428 inidentical-groups: 207 {}
-[00025.438 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00036.445 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda
-[00041.783 ms; 051 iters.] [1.8962e-06 err.] pagerankCuda [skip]
+[00038.688 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda
+[00037.153 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000428; inidentical-groups=00000207]
+[00036.877 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000008; inidentical-groups=00000002]
+[00036.916 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00036.905 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00036.902 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00036.894 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00036.918 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00036.909 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/coPapersDBLP.mtx ...
 order: 540486 size: 30491458 {}
 order: 540486 size: 30491458 {} (transposeWithDegree)
-inidenticals: 545 inidentical-groups: 264 {}
-[00024.872 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00037.874 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda
-[00042.804 ms; 049 iters.] [1.4561e-06 err.] pagerankCuda [skip]
+[00039.924 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda
+[00038.207 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00000545; inidentical-groups=00000264]
+[00038.155 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000005; inidentical-groups=00000001]
+[00038.174 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00038.174 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00038.174 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00038.124 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00038.181 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00038.199 ms; 049 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/indochina-2004.mtx ...
 order: 7414866 size: 194109311 {}
 order: 7414866 size: 194109311 {} (transposeWithDegree)
-inidenticals: 3812336 inidentical-groups: 536482 {}
-[00194.073 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00123.094 ms; 060 iters.] [1.7976e-06 err.] pagerankCuda
-[00094.567 ms; 060 iters.] [2.4505e-06 err.] pagerankCuda [skip]
+[00123.998 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda
+[00092.285 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=03812478; inidentical-groups=00536411]
+[00091.617 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=03158460; inidentical-groups=00248667]
+[00094.481 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=02526184; inidentical-groups=00125764]
+[00098.903 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=01740972; inidentical-groups=00050013]
+[00104.658 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00902774; inidentical-groups=00012522]
+[00107.490 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00520148; inidentical-groups=00003583]
+[00112.840 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00298452; inidentical-groups=00001067]
+[00118.181 ms; 060 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00174415; inidentical-groups=00000341]
 
 Loading graph /home/subhajit/data/italy_osm.mtx ...
 order: 6686493 size: 14027956 {}
 order: 6686493 size: 14027956 {} (transposeWithDegree)
-inidenticals: 14711 inidentical-groups: 7268 {}
-[00061.843 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00030.146 ms; 063 iters.] [6.4568e-07 err.] pagerankCuda
-[00037.076 ms; 063 iters.] [6.7454e-07 err.] pagerankCuda [skip]
+[00030.145 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+[00033.573 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00014705; inidentical-groups=00007265]
+[00032.898 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000000; inidentical-groups=00000000]
+[00033.342 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00033.249 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00032.882 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00032.890 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00032.889 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00033.288 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/great-britain_osm.mtx ...
 order: 7733822 size: 16313034 {}
 order: 7733822 size: 16313034 {} (transposeWithDegree)
-inidenticals: 150274 inidentical-groups: 74837 {}
-[00077.224 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00039.702 ms; 067 iters.] [1.6188e-07 err.] pagerankCuda
-[00048.222 ms; 067 iters.] [1.9888e-07 err.] pagerankCuda [skip]
+[00039.483 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda
+[00044.569 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00150268; inidentical-groups=00074834]
+[00042.906 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000024; inidentical-groups=00000006]
+[00042.885 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00043.086 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00042.868 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00042.884 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00043.136 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00043.384 ms; 067 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/germany_osm.mtx ...
 order: 11548845 size: 24738362 {}
 order: 11548845 size: 24738362 {} (transposeWithDegree)
-inidenticals: 73324 inidentical-groups: 36401 {}
-[00114.028 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00062.176 ms; 065 iters.] [2.0173e-07 err.] pagerankCuda
-[00070.281 ms; 065 iters.] [2.3636e-07 err.] pagerankCuda [skip]
+[00061.939 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda
+[00068.671 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00073322; inidentical-groups=00036400]
+[00066.890 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000010; inidentical-groups=00000002]
+[00067.020 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00066.826 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00067.021 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00066.948 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00066.863 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00066.922 ms; 065 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]
 
 Loading graph /home/subhajit/data/asia_osm.mtx ...
 order: 11950757 size: 25423206 {}
 order: 11950757 size: 25423206 {} (transposeWithDegree)
-inidenticals: 38011 inidentical-groups: 18734 {}
-[00108.215 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-[00051.589 ms; 063 iters.] [6.7846e-07 err.] pagerankCuda
-[00058.879 ms; 063 iters.] [7.0825e-07 err.] pagerankCuda [skip]
+[00051.537 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+[00056.825 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=002; inidenticals=00038007; inidentical-groups=00018732]
+[00056.406 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=004; inidenticals=00000004; inidentical-groups=00000001]
+[00056.215 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=008; inidenticals=00000000; inidentical-groups=00000000]
+[00056.588 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=016; inidenticals=00000000; inidentical-groups=00000000]
+[00056.203 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=032; inidenticals=00000000; inidentical-groups=00000000]
+[00056.457 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=064; inidenticals=00000000; inidentical-groups=00000000]
+[00056.227 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=128; inidenticals=00000000; inidentical-groups=00000000]
+[00056.391 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-inidenticals=256; inidenticals=00000000; inidentical-groups=00000000]

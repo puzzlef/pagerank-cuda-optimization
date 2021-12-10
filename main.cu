@@ -23,7 +23,7 @@ void runPagerank(const G& x, const H& xt, int repeat) {
     auto is = edgeIdenticalsFromSize(xt, SI);
     auto a2 = pagerankMonolithicCuda(x, xt, init, {repeat, L1, SI});
     auto e2 = l1Norm(a2.ranks, a1.ranks);
-    printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [skip-indenticals=%03d; inidenticals=%08d; inidentical-groups=%08d]\n", a2.time, a2.iterations, e2, SI, size2d(is), size(is));
+    printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankCuda [skip-inidenticals=%03d; inidenticals=%08d; inidentical-groups=%08d]\n", a2.time, a2.iterations, e2, SI, size2d(is), size(is));
   }
 }
 

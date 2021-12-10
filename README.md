@@ -34,20 +34,30 @@ $ ...
 # Loading graph /home/subhajit/data/web-Stanford.mtx ...
 # order: 281903 size: 2312497 {}
 # order: 281903 size: 2312497 {} (transposeWithDegree)
-# inidenticals: 80096 inidentical-groups: 13684 {}
-# [00012.125 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00011.352 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
-# [00018.499 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [skip]
+# [00011.356 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda
+# [00011.487 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=002; inidenticals=00100411; inidentical-groups=00013685]
+# [00011.480 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=004; inidenticals=00081602; inidentical-groups=00005358]
+# [00011.943 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=008; inidenticals=00068989; inidentical-groups=00002814]
+# [00011.597 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=016; inidenticals=00042289; inidentical-groups=00000621]
+# [00011.611 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=032; inidenticals=00033030; inidentical-groups=00000210]
+# [00011.566 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=064; inidenticals=00026535; inidentical-groups=00000066]
+# [00011.578 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=128; inidenticals=00022136; inidentical-groups=00000013]
+# [00011.568 ms; 063 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=256; inidenticals=00020315; inidentical-groups=00000001]
 #
 # ...
 #
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# inidenticals: 556210 inidentical-groups: 203669 {}
-# [00168.124 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00158.059 ms; 051 iters.] [3.2208e-06 err.] pagerankCuda
-# [00166.893 ms; 051 iters.] [3.2467e-06 err.] pagerankCuda [skip]
+# [00156.449 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda
+# [00163.209 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=002; inidenticals=00914539; inidentical-groups=00203669]
+# [00161.975 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=004; inidenticals=00520954; inidentical-groups=00025620]
+# [00161.918 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=008; inidenticals=00418530; inidentical-groups=00003613]
+# [00161.633 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=016; inidenticals=00391550; inidentical-groups=00000936]
+# [00162.428 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=032; inidenticals=00378344; inidentical-groups=00000316]
+# [00161.693 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=064; inidenticals=00369064; inidentical-groups=00000096]
+# [00162.415 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=128; inidenticals=00362503; inidentical-groups=00000021]
+# [00161.733 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-indenticals=256; inidenticals=00359326; inidentical-groups=00000004]
 #
 # ...
 ```
