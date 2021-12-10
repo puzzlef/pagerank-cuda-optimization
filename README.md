@@ -2,18 +2,26 @@ Performance benefit of **skipping converged vertices** for **CUDA** based
 PageRank ([pull], [CSR]).
 
 This experiment was for comparing performance between:
-1. Find pagerank **without optimization**.
-2. Find pagerank *skipping converged vertices* **with re-check** (in `2`-`16` turns).
-3. Find pagerank *skipping converged vertices* **after several turns** (in `2`-`64` turns).
+1. Find PageRank **without optimization**.
+2. Find PageRank *skipping converged vertices* **with re-check** (in `2`-`16` turns).
+3. Find PageRank *skipping converged vertices* **after several turns** (in `2`-`64` turns).
 
-Each approach was attempted on a number of graphs, running each approach 5
-times to get a good time measure. **Skip with re-check** (`skip-check`) is
-done every `2`-`16` turns. **Skip after turns** (`skip-after`) is done after
-`2`-`64` turns. On average, *neither* `skip-check`, nor `skip-after` gives
-**better speed** than the **default (unoptimized) approach**. This could be
-due to the unnessary iterations added by `skip-check` (mistakenly skipped),
-and increased memory accesses performed by `skip-after` (tracking converged
-count).
+Each approach was attempted on a number of graphs, running each approach 5 times
+to get a good time measure. **Skip with re-check** (`skip-check`) is done every
+`2`-`16` turns. **Skip after turns** (`skip-after`) is done after `2`-`64`
+turns.
+
+Results indicate that the optimizations provide an improvement on only a
+few graphs (without introducing too much error):
+- For `web-Stanford`, a `skip-check` of `11`-`14` appears to work best.
+- For `web-BerkStan`, a `skip-check` of `8`-`14` appears to work best.
+- For other graphs, there is no improvement.
+
+On average however, *neither* `skip-check`, nor `skip-after` gives **better
+speed** than the **default (unoptimized) approach** (considering the error
+introduced due to skipping). This could be due to the unnecessary iterations
+added by `skip-check` (mistakenly skipped), and increased memory accesses
+performed by `skip-after` (tracking converged count).
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are to be included below, generated from [sheets]. The input
@@ -65,44 +73,12 @@ $ ...
 # ...
 ```
 
-[![](https://i.imgur.com/M0oVGr4.png)][sheetp]
-[![](https://i.imgur.com/VnL7OqQ.png)][sheetp]
-[![](https://i.imgur.com/Nlu7uGc.png)][sheetp]
-[![](https://i.imgur.com/svOiSox.png)][sheetp]
-[![](https://i.imgur.com/7rFFtve.png)][sheetp]
-[![](https://i.imgur.com/heoESwj.png)][sheetp]
-[![](https://i.imgur.com/VNH19GP.png)][sheetp]
-[![](https://i.imgur.com/fTQDX96.png)][sheetp]
-[![](https://i.imgur.com/ly9pvtW.png)][sheetp]
-[![](https://i.imgur.com/7vULjni.png)][sheetp]
-[![](https://i.imgur.com/H68ewoE.png)][sheetp]
-[![](https://i.imgur.com/59SNFZy.png)][sheetp]
-[![](https://i.imgur.com/Xx6YRDL.png)][sheetp]
-[![](https://i.imgur.com/js2BmD3.png)][sheetp]
-[![](https://i.imgur.com/MTbWHqZ.png)][sheetp]
-[![](https://i.imgur.com/EfoHAEG.png)][sheetp]
-[![](https://i.imgur.com/tTnKQqR.png)][sheetp]
-[![](https://i.imgur.com/Ix3JQxN.png)][sheetp]
-[![](https://i.imgur.com/k41RlG8.png)][sheetp]
-[![](https://i.imgur.com/KfGyokd.png)][sheetp]
-[![](https://i.imgur.com/HLtW60o.png)][sheetp]
-[![](https://i.imgur.com/ugsQGm2.png)][sheetp]
-[![](https://i.imgur.com/lHnZwUD.png)][sheetp]
-[![](https://i.imgur.com/2RFrqbC.png)][sheetp]
-[![](https://i.imgur.com/njcyp8L.png)][sheetp]
-[![](https://i.imgur.com/U8uIH10.png)][sheetp]
-[![](https://i.imgur.com/fLufmYV.png)][sheetp]
-[![](https://i.imgur.com/NeNcpSy.png)][sheetp]
-[![](https://i.imgur.com/BLtWtUv.png)][sheetp]
-[![](https://i.imgur.com/gdkQ7d6.png)][sheetp]
-[![](https://i.imgur.com/ENsz3a8.png)][sheetp]
-[![](https://i.imgur.com/UgEAvHh.png)][sheetp]
-[![](https://i.imgur.com/CvHzpcr.png)][sheetp]
-[![](https://i.imgur.com/1YhimVf.png)][sheetp]
+[![](https://i.imgur.com/wcpqS4z.gif)][sheetp]
+[![](https://i.imgur.com/Ukl771H.gif)][sheetp]
 
-[![](https://i.imgur.com/Hzk0X81.png)][sheetp]
-[![](https://i.imgur.com/pxz5RVh.png)][sheetp]
-[![](https://i.imgur.com/Mu0BRHm.png)][sheetp]
+[![](https://i.imgur.com/bMdnihr.png)][sheetp]
+[![](https://i.imgur.com/tdZOpI2.png)][sheetp]
+[![](https://i.imgur.com/0kvtkU9.png)][sheetp]
 
 <br>
 <br>
