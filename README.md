@@ -35,33 +35,32 @@ $ ...
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# [00168.424 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00162.337 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda
-# [00169.842 ms; 051 iters.] [3.2220e-06 err.] pagerankCuda [skip-check=2]
-# [00169.963 ms; 051 iters.] [3.2265e-06 err.] pagerankCuda [skip-check=3]
-# [00169.904 ms; 051 iters.] [3.2348e-06 err.] pagerankCuda [skip-check=4]
-# [00169.820 ms; 051 iters.] [3.2375e-06 err.] pagerankCuda [skip-check=6]
-# [00169.843 ms; 051 iters.] [3.2464e-06 err.] pagerankCuda [skip-check=8]
-# [00169.774 ms; 051 iters.] [3.2740e-06 err.] pagerankCuda [skip-check=11]
-# [00170.497 ms; 051 iters.] [3.3190e-06 err.] pagerankCuda [skip-check=14]
-# [00168.862 ms; 051 iters.] [3.2294e-06 err.] pagerankCuda [skip-after=2]
-# [00168.807 ms; 051 iters.] [3.2247e-06 err.] pagerankCuda [skip-after=3]
-# [00168.771 ms; 051 iters.] [3.2240e-06 err.] pagerankCuda [skip-after=4]
-# [00168.737 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=6]
-# [00168.713 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=8]
-# [00168.717 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=11]
-# [00169.499 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=14]
-# [00168.802 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=17]
-# [00168.865 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=21]
-# [00168.743 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=25]
-# [00168.943 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=29]
-# [00168.862 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=33]
-# [00168.817 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=38]
-# [00169.524 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=43]
-# [00169.056 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=48]
-# [00168.912 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=53]
-# [00168.800 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=58]
-# [00168.851 ms; 051 iters.] [3.2209e-06 err.] pagerankCuda [skip-after=63]
+# [00162.126 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda
+# [00169.448 ms; 051 iters.] [1.9773e-09 err.] pagerankCuda [skip-check=2]
+# [00169.080 ms; 051 iters.] [4.6557e-09 err.] pagerankCuda [skip-check=3]
+# [00169.111 ms; 051 iters.] [6.1110e-09 err.] pagerankCuda [skip-check=4]
+# [00169.113 ms; 051 iters.] [1.1584e-08 err.] pagerankCuda [skip-check=6]
+# [00169.172 ms; 051 iters.] [3.3697e-08 err.] pagerankCuda [skip-check=8]
+# [00169.154 ms; 051 iters.] [6.5356e-08 err.] pagerankCuda [skip-check=11]
+# [00169.901 ms; 051 iters.] [1.2554e-07 err.] pagerankCuda [skip-check=14]
+# [00168.043 ms; 051 iters.] [9.5494e-09 err.] pagerankCuda [skip-after=2]
+# [00168.051 ms; 051 iters.] [1.5228e-09 err.] pagerankCuda [skip-after=3]
+# [00168.042 ms; 051 iters.] [6.8778e-10 err.] pagerankCuda [skip-after=4]
+# [00168.046 ms; 051 iters.] [2.0807e-10 err.] pagerankCuda [skip-after=6]
+# [00168.015 ms; 051 iters.] [9.7309e-11 err.] pagerankCuda [skip-after=8]
+# [00167.987 ms; 051 iters.] [2.8471e-11 err.] pagerankCuda [skip-after=11]
+# [00168.526 ms; 051 iters.] [5.6239e-12 err.] pagerankCuda [skip-after=14]
+# [00168.021 ms; 051 iters.] [9.5213e-13 err.] pagerankCuda [skip-after=17]
+# [00168.362 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=21]
+# [00168.032 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=25]
+# [00168.040 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=29]
+# [00168.973 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=33]
+# [00168.467 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=38]
+# [00168.034 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=43]
+# [00168.021 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=48]
+# [00168.038 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=53]
+# [00168.036 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=58]
+# [00168.070 ms; 051 iters.] [0.0000e+00 err.] pagerankCuda [skip-after=63]
 #
 # ...
 ```
@@ -111,8 +110,9 @@ $ ...
 
 ## References
 
-- [STIC-D: algorithmic techniques for efficient parallel pagerank computation on real-world graphs][STIC-D algorithm]
-- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](http://snap.stanford.edu/class/cs246-videos-2019/lec9_190205-cs246-720.mp4)
+- [STIC-D: Algorithmic Techniques For Efficient Parallel Pagerank Computation on Real-World Graphs](https://gist.github.com/wolfram77/bb09968cc0e592583c4b180243697d5a)
+- [Adjusting PageRank parameters and Comparing results](https://arxiv.org/abs/2108.02997)
+- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](https://www.youtube.com/watch?v=ke9g8hB0MEo)
 - [SuiteSparse Matrix Collection]
 
 <br>
@@ -121,9 +121,8 @@ $ ...
 [![](https://i.imgur.com/KExwVG1.jpg)](https://www.youtube.com/watch?v=A7TKQKAFIi4)
 
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
-[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
-[STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
-[SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
+[Prof. Kishore Kothapalli]: https://www.iiit.ac.in/people/faculty/kkishore/
+[SuiteSparse Matrix Collection]: https://sparse.tamu.edu
 ["graphs"]: https://github.com/puzzlef/graphs
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
