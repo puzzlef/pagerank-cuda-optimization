@@ -7,7 +7,7 @@
 #include "vertices.hxx"
 #include "edges.hxx"
 #include "csr.hxx"
-#include "identicals.hxx"
+#include "chains.hxx"
 #include "pagerank.hxx"
 
 using std::array;
@@ -21,28 +21,29 @@ using std::max;
 
 
 
-// PAGERANK-IDENTICALS
-// -------------------
+// PAGERANK-CHAINS
+// ---------------
 
-template <class H, class J>
-auto pagerankCudaIdenticals(const H& xt, J&& ks, int SI) {
+template <class G, class H, class J, class T>
+auto pagerankCudaChainsRootDist(const G& x, const H& xt, const J& ks, int SC) {
   int N = xt.order();
-  vector<int> vroot(N);
-  if (SI==0) return vroot;
+  vector<int> vroot(N), vdist(N);
+  if (SC==0) return make_pair(vroot, vdist);
+  auto ch = chainsFromSize(x, xt, ks, SC);
   auto id = indices(ks);
-  auto is = edgeIdenticalsFromSize(xt, ks, SI);
-  for (auto& vs : is) {
+  for (auto& vs : ch) {
     int v = id[vs[0]];
     for (int i=1; i<vs.size(); i++) {
       int u = id[vs[i]];
       vroot[u] = v+1;
+      vdist[u] = i;
     }
   }
-  return vroot;
+  return make_pair(vroot, vdist);
 }
 
 
-void pagerankCudaMarkIdenticals(vector<int>& vfrom, const vector<int>& vroot) {
+void pagerankCudaMarkChains(vector<int>& vfrom, const vector<int>& vroot) {
   for (int i=0; i<vroot.size(); i++)
     if (vroot[i]) vfrom[i] = -abs(vfrom[i]);
 }
@@ -124,7 +125,7 @@ __global__ void pagerankBlockKernel(T *a, const T *c, const int *vfrom, const in
   DEFINE(t, b, B, G);
   __shared__ T cache[S];
   for (int v=i+b; v<i+n; v+=G) {
-    if (vfrom && vfrom[v]<0) continue;
+    if (vfrom[v]<0) continue;
     int ebgn = abs(vfrom[v]);
     int ideg = abs(vfrom[v+1])-abs(vfrom[v]);
     cache[t] = sumAtKernelLoop(c, efrom+ebgn, ideg, t, B);
@@ -150,7 +151,7 @@ template <class T>
 __global__ void pagerankThreadKernel(T *a, const T *c, const int *vfrom, const int *efrom, int i, int n, T c0) {
   DEFINE(t, b, B, G);
   for (int v=i+B*b+t; v<i+n; v+=G*B) {
-    if (vfrom && vfrom[v]<0) continue;
+    if (vfrom[v]<0) continue;
     int ebgn = abs(vfrom[v]);
     int ideg = abs(vfrom[v+1])-abs(vfrom[v]);
     a[v] = c0 + sumAtKernelLoop(c, efrom+ebgn, ideg, 0, 1);
@@ -182,21 +183,24 @@ void pagerankSwitchedCu(T *a, const T *c, const int *vfrom, const int *efrom, in
 
 
 
-// PAGERANK-IDENTICALS
-// -------------------
+// PAGERANK-CHAINS
+// ---------------
 
 template <class T>
-__global__ void pagerankIdenticalsKernel(T *a, const int *vroot, int i, int n) {
+__global__ void pagerankChainsKernel(T *a, T *r, const int *vroot, const int *vdist, int i, int n, T p, T c0) {
   DEFINE(t, b, B, G);
-  for (int v=i+B*b+t; v<i+n; v+=G*B)
-    if (vroot[v]) a[v] = a[vroot[v]-1];
+  for (int v=i+B*b+t; v<i+n; v+=G*B) {
+    if (vroot[v]==0) continue;
+    T pd = pow(p, vdist[v]);
+    a[v] = ((1-pd)/(1-p)) * c0 + pd * r[vroot[v]-1];
+  }
 }
 
 template <class T>
-void pagerankIdenticalsCu(T *a, const int *vroot, int i, int n) {
+void pagerankChainsCu(T *a, T *r, const int *vroot, const int *vdist, int i, int n, T p, T c0) {
   int B = BLOCK_DIM_M<T>();
   int G = min(ceilDiv(n, B), GRID_DIM_M<T>());
-  pagerankIdenticalsKernel<<<G, B>>>(a, vroot, i, n);
+  pagerankChainsKernel<<<G, B>>>(a, r, vroot, vdist, i, n, p, c0);
 }
 
 
@@ -304,17 +308,18 @@ PagerankResult<T> pagerankCuda(const H& xt, const J& ks, int i, const M& ns, FL 
   T    E  = o.tolerance;
   int  L  = o.maxIterations, l = 0;
   int  EF = o.toleranceNorm;
-  int  SI = o.skipInidenticals;
+  int  SC = o.skipChains;
   int  R  = reduceSizeCu<T>(N);
   auto vfrom = sourceOffsets(xt, ks);
   auto efrom = destinationIndices(xt, ks);
   auto vdata = vertexData(xt, ks);
-  auto vroot = pagerankCudaIdenticals(xt, ks, SI);
-  pagerankCudaMarkIdenticals(vfrom, vroot);
+  auto [vroot, vdist] = pagerankCudaChainsRootDist(x, xt, ks, SC);
+  pagerankCudaMarkChains(vfrom, vroot);
   int VFROM1 = vfrom.size() * sizeof(int);
   int EFROM1 = efrom.size() * sizeof(int);
   int VDATA1 = vdata.size() * sizeof(int);
   int VROOT1 = vroot.size() * sizeof(int);
+  int VDIST1 = vdist.size() * sizeof(int);
   int N1 = N * sizeof(T);
   int R1 = R * sizeof(T);
   vector<T> a(N), r(N), qc;
@@ -322,7 +327,8 @@ PagerankResult<T> pagerankCuda(const H& xt, const J& ks, int i, const M& ns, FL 
 
   T *e,  *r0;
   T *eD, *r0D, *fD, *rD, *cD, *aD;
-  int *vfromD, *efromD, *vdataD, *vrootD = NULL;
+  int *vfromD, *efromD, *vdataD;
+  int *vrootD = NULL, *vdistD = NULL;
   // TRY( cudaProfilerStart() );
   TRY( cudaSetDeviceFlags(cudaDeviceMapHost) );
   TRY( cudaHostAlloc(&e,  R1, cudaHostAllocDefault) );
@@ -336,19 +342,21 @@ PagerankResult<T> pagerankCuda(const H& xt, const J& ks, int i, const M& ns, FL 
   TRY( cudaMalloc(&vfromD, VFROM1) );
   TRY( cudaMalloc(&efromD, EFROM1) );
   TRY( cudaMalloc(&vdataD, VDATA1) );
-  if (SI) TRY( cudaMalloc(&vrootD, VROOT1) );
+  if (SC) TRY( cudaMalloc(&vrootD, VROOT1) );
+  if (SC) TRY( cudaMalloc(&vdistD, VDIST1) );
   TRY( cudaMemcpy(vfromD, vfrom.data(), VFROM1, cudaMemcpyHostToDevice) );
   TRY( cudaMemcpy(efromD, efrom.data(), EFROM1, cudaMemcpyHostToDevice) );
   TRY( cudaMemcpy(vdataD, vdata.data(), VDATA1, cudaMemcpyHostToDevice) );
-  if (SI) TRY( cudaMemcpy(vrootD, vroot.data(), VROOT1, cudaMemcpyHostToDevice) );
+  if (SC) TRY( cudaMemcpy(vrootD, vroot.data(), VROOT1, cudaMemcpyHostToDevice) );
+  if (SC) TRY( cudaMemcpy(vdistD, vdist.data(), VDIST1, cudaMemcpyHostToDevice) );
 
   float t = measureDurationMarked([&](auto mark) {
     if (q) copy(r, qc);    // copy old ranks (qc), if given
     else fill(r, T(1)/N);
     TRY( cudaMemcpy(aD, r.data(), N1, cudaMemcpyHostToDevice) );
     TRY( cudaMemcpy(rD, r.data(), N1, cudaMemcpyHostToDevice) );
-    mark([&] { pagerankFactorCu(fD, vdataD, 0, N, p); multiplyCu(cD, aD, fD, N); });                               // calculate factors (fD) and contributions (cD)
-    mark([&] { l = fl(e, r0, eD, r0D, aD, rD, cD, fD, vfromD, efromD, vdataD, vrootD, i, ns, N, p, E, L, EF); });  // calculate ranks of vertices
+    mark([&] { pagerankFactorCu(fD, vdataD, 0, N, p); multiplyCu(cD, aD, fD, N); });                                       // calculate factors (fD) and contributions (cD)
+    mark([&] { l = fl(e, r0, eD, r0D, aD, rD, cD, fD, vfromD, efromD, vdataD, vrootD, vdistD, i, ns, N, p, E, L, EF); });  // calculate ranks of vertices
   }, o.repeat);
   TRY( cudaMemcpy(a.data(), aD, N1, cudaMemcpyDeviceToHost) );
 
@@ -363,7 +371,8 @@ PagerankResult<T> pagerankCuda(const H& xt, const J& ks, int i, const M& ns, FL 
   TRY( cudaFree(vfromD) );
   TRY( cudaFree(efromD) );
   TRY( cudaFree(vdataD) );
-  if (SI) TRY( cudaFree(vrootD) );
+  if (SC) TRY( cudaFree(vrootD) );
+  if (SC) TRY( cudaFree(vdistD) );
   // TRY( cudaProfilerStop() );
   return {decompressContainer(xt, a, ks), l, t};
 }

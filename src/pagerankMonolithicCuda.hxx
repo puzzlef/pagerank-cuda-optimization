@@ -22,7 +22,7 @@ using std::max;
 // -------------
 
 template <class T, class J>
-int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD, const T *fD, const int *vfromD, const int *efromD, const int *vdataD, const int *vrootD, int i, const J& ns, int N, T p, T E, int L, int EF) {
+int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD, const T *fD, const int *vfromD, const int *efromD, const int *vdataD, const int *vrootD, const int *vdistD, int i, const J& ns, int N, T p, T E, int L, int EF) {
   int n = sumAbs(ns);
   int R = reduceSizeCu<T>(n);
   size_t R1 = R * sizeof(T);
@@ -32,7 +32,7 @@ int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, T *cD
     TRY( cudaMemcpy(r0, r0D, R1, cudaMemcpyDeviceToHost) );
     T c0 = (1-p)/N + p*sum(r0, R)/N;
     pagerankSwitchedCu(aD, cD, vfromD, efromD, i, ns, c0);  // assume contribtions (cD) is precalculated
-    if (vrootD) pagerankIdenticalsCu(aD, vrootD, i, n);
+    if (vrootD) pagerankChainsCu(aD, rD, vrootD, vdistD, i, n, p, c0);
     pagerankErrorCu(eD, aD+i, rD+i, n, EF);
     TRY( cudaMemcpy(e, eD, R1, cudaMemcpyDeviceToHost) );
     T el = pagerankErrorReduce(e, R, EF); ++l;              // one iteration complete
