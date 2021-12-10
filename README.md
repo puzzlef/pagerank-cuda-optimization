@@ -2,18 +2,38 @@ Performance benefit of **CUDA** based PageRank with **vertices split by**
 **components** ([pull], [CSR]).
 
 This experiment was for comparing performance between:
-1. Find **CUDA** based pagerank **without optimization**.
-2. Find **CUDA** based pagerank with vertices **split by components**.
-3. Find **CUDA** based pagerank with components **sorted in topological order**.
+1. Find **CUDA** based PageRank **without optimization**.
+2. Find **CUDA** based PageRank with vertices **split by components**.
+3. Find **CUDA** based PageRank with components **sorted in topological order**.
 
-Each approach was attempted on a number of graphs, running each approach 5
-times to get a good time measure. On an few graphs, **splitting vertices by**
-**components** provides a **speedup**, but *sorting components in*
-*topological order* provides *no additional speedup*. For **road networks**
-(and some **web graph**), like `germany_osm` which only have *one component*,
-the speedup is possibly because of the *vertex reordering* caused by `dfs()`
-which is required for splitting by components. However, **on average** there
-is **no speedup**.
+For this experiment, the vertices were kept as is (*default*), **split by
+components** (*split*), or additionally **sorted in topological order**
+(*split+sort*). Small components were joined together until they satisfied a
+**min. compute size**. Each joined component is then run through *PageRank
+compute call*. **Min. compute size** was varied from `1E+0` to `5E+7`, and
+PageRank was run 5 times to get a good time measure. From both from GM and AM
+execution times, it is observed that with a low *min compute*, the time taken
+for PageRank computation is significantly high (for both *split*, and
+*split+sort*). This is likely because with a lot of small components, a large
+number of kernel calls have to be made, which is expensive business. As *min
+compute* is increased, PageRank computation time drops, and seems to stabilize
+at a **min compute** of `1E+7` to `5E+7`. With respect to **GM-RATIO**, both
+*split* and *split+sort* complete in **7% less time (1.08x)** compared to
+default approach (no components). Write respect to **AM-RATIO**, *split*
+completes in **6% less time (1.06x)**, and *split+sort* completes in **7% less
+time (1.08x)** compared to default approach. This is the case for *min compute*
+of *1E+7* or *5E+7*.
+
+On a few graphs, **splitting vertices by components** provides a **speedup**,
+but *sorting components in topological order* provides *no additional speedup*.
+For **road networks** (and some **collaboration networks**), like `germany_osm`
+which only have *one component*, the speedup is possibly because of the *vertex
+reordering* caused by `dfs()` which is required for splitting by components.
+However, **on average** there is a **small speedup**. Although it was observed
+[here] that splitting by components can provide memory locality benefits through
+better cache utilization, it appears that the cost of increased kernel calls is
+significant. It is important to note here that in order to reduce work imbalance
+between threads of the GPU, vertices are partitioned by degree.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
@@ -72,8 +92,11 @@ $ ...
 # ...
 ```
 
-[![](https://i.imgur.com/uXlPCB3.png)][sheetp]
-[![](https://i.imgur.com/UooLZXJ.png)][sheetp]
+[![](https://i.imgur.com/ln3gWSI.gif)][sheetp]
+[![](https://i.imgur.com/01SMSvK.png)][sheetp]
+[![](https://i.imgur.com/oPzKwJH.png)][sheetp]
+[![](https://i.imgur.com/G5yaIo5.png)][sheetp]
+[![](https://i.imgur.com/JUiwhFb.png)][sheetp]
 
 <br>
 <br>
@@ -89,7 +112,7 @@ $ ...
 <br>
 <br>
 
-[![](https://i.imgur.com/tza58mI.png)](https://www.youtube.com/watch?v=eVvonVlbcFg)
+[![](https://i.imgur.com/TSKFNzd.png)](https://www.youtube.com/watch?v=eVvonVlbcFg)
 
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
 [Prof. Kishore Kothapalli]: https://www.iiit.ac.in/people/faculty/kkishore/
