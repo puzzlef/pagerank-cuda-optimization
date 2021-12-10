@@ -9,13 +9,70 @@ using std::vector;
 using std::unordered_map;
 using std::iterator_traits;
 using std::hash;
+using std::for_each;
+using std::any_of;
+using std::all_of;
 using std::find;
 using std::find_if;
 using std::lower_bound;
 using std::count;
 using std::count_if;
+using std::transform;
 using std::set_difference;
 using std::back_inserter;
+
+
+
+
+// FOR-EACH
+// --------
+
+template <class I, class F>
+auto forEach(I ib, I ie, F fn) {
+  return for_each(ib, ie, fn);
+}
+
+template <class J, class F>
+auto forEach(const J& x, F fn) {
+  return for_each(x.begin(), x.end(), fn);
+}
+
+template <class J, class F>
+auto forEach(J& x, F fn) {
+  return for_each(x.begin(), x.end(), fn);
+}
+
+
+
+
+// ANY-OF
+// ------
+
+template <class I, class F>
+auto anyOf(I ib, I ie, F fn) {
+  return any_of(ib, ie, fn);
+}
+
+template <class J, class F>
+auto anyOf(const J& x, F fn) {
+  return any_of(x.begin(), x.end(), fn);
+}
+
+
+
+
+// ALL-OF
+// ------
+
+template <class I, class F>
+auto allOf(I ib, I ie, F fn) {
+  return all_of(ib, ie, fn);
+}
+
+template <class J, class F>
+auto allOf(const J& x, F fn) {
+  return all_of(x.begin(), x.end(), fn);
+}
 
 
 
@@ -73,8 +130,8 @@ auto lowerBound(const J& x, const T& v) {
 }
 
 template <class J, class T, class F>
-auto lowerBound(const J& x, const T& v, F fc) {
-  return lower_bound(x.begin(), x.end(), v, fc);
+auto lowerBound(const J& x, const T& v, F fl) {
+  return lower_bound(x.begin(), x.end(), v, fl);
 }
 
 template <class J, class T>
@@ -83,8 +140,8 @@ int lowerBoundIndex(const J& x, const T& v) {
 }
 
 template <class J, class T, class F>
-int lowerBoundIndex(const J& x, const T& v, F fc) {
-  return lower_bound(x.begin(), x.end(), v, fc) - x.begin();
+int lowerBoundIndex(const J& x, const T& v, F fl) {
+  return lower_bound(x.begin(), x.end(), v, fl) - x.begin();
 }
 
 template <class J, class T>
@@ -94,9 +151,15 @@ int lowerBoundEqIndex(const J& x, const T& v) {
 }
 
 template <class J, class T, class F>
-int lowerBoundEqIndex(const J& x, const T& v, F fc) {
-  auto it = lower_bound(x.begin(), x.end(), v, fc);
+int lowerBoundEqIndex(const J& x, const T& v, F fl) {
+  auto it = lower_bound(x.begin(), x.end(), v, fl);
   return it==x.end() || *it!=v? -1 : it-x.begin();
+}
+
+template <class J, class T, class F, class G>
+int lowerBoundEqIndex(const J& x, const T& v, F fl, G fe) {
+  auto it = lower_bound(x.begin(), x.end(), v, fl);
+  return it==x.end() || !fe(*it, v)? -1 : it-x.begin();
 }
 
 
@@ -124,6 +187,25 @@ int countIf(const J& x, F fn) {
 
 
 
+// COUNT-ALL
+// ---------
+
+template <class I>
+auto countAll(I ib, I ie) {
+  using T = typename I::value_type;
+  unordered_map<T, int> a;
+  for_each(ib, ie, [&](const auto& v) { a[v]++; });
+  return a;
+}
+
+template <class J>
+auto countAll(const J& x) {
+  return countAll(x.begin(), x.end());
+}
+
+
+
+
 // INDICES
 // -------
 
@@ -137,8 +219,50 @@ auto indices(I ib, I ie) {
 }
 
 template <class J>
-auto indices(J&& x) {
+auto indices(const J& x) {
   return indices(x.begin(), x.end());
+}
+
+
+
+
+// IDENTIFIERS
+// -----------
+
+template <class I>
+auto identifiers(I ib, I ie) {
+  using K = typename iterator_traits<I>::value_type;
+  unordered_map<K, int> a; int i = 0;
+  for (I it=ib; it!=ie; ++it)
+    if (a.count(*it)==0) a[*it] = i++;
+  return a;
+}
+
+template <class J>
+auto identifiers(const J& x) {
+  return identifiers(x.begin(), x.end());
+}
+
+
+
+
+// TRANSFORM
+// ---------
+
+template <class J, class F>
+void transform(J& x, F fn) {
+  transform(x.begin(), x.end(), x.begin(), fn);
+}
+
+
+
+
+// SORT
+// ----
+
+template <class J>
+void sort(J& x) {
+  sort(x.begin(), x.end());
 }
 
 
@@ -148,17 +272,17 @@ auto indices(J&& x) {
 // --------------
 
 template <class L, class J, class K>
-void setDifference(L&& a, J&& x, K&& y) {
+void setDifference(L& a, const J& x, const K& y) {
   set_difference(x.begin(), x.end(), y.begin(), y.end(), a.begin());
 }
 
 template <class T, class J, class K>
-void setDifference(vector<T>& a, J&& x, K&& y) {
+void setDifference(vector<T>& a, const J& x, const K& y) {
   set_difference(x.begin(), x.end(), y.begin(), y.end(), back_inserter(a));
 }
 
 template <class J, class K>
-auto setDifference(J&& x, K&& y) {
+auto setDifference(const J& x, const K& y) {
   using I = decltype(x.begin());
   using T = typename iterator_traits<I>::value_type;
   vector<T> a; setDifference(a, x, y);
@@ -168,26 +292,31 @@ auto setDifference(J&& x, K&& y) {
 
 
 
-// TO-*
-// ----
+// WRITE
+// -----
 
 template <class T, class I>
-void toVector(vector<T>& a, I ib, I ie) {
+void write(vector<T>& a, I ib, I ie) {
   a.clear();
-  for (I it=ib; it!=ie; ++it)
-    a.push_back(*it);;
+  a.insert(a.begin(), ib, ie);
 }
+
+template <class T, class J>
+void write(vector<T>& a, const J& vs) {
+  write(a, vs.begin(), vs.end());
+}
+
+
+
+
+// TO-*
+// ----
 
 template <class I>
 auto toVector(I ib, I ie) {
   using T = typename I::value_type;
-  vector<T> a; toVector(a, ib, ie);
+  vector<T> a; write(a, ib, ie);
   return a;
-}
-
-template <class T, class J>
-void toVector(vector<T>& a, const J& x) {
-  toVector(a, x.begin(), x.end());
 }
 
 template <class J>
@@ -204,8 +333,7 @@ void toVector(const J& x) {
 template <class T, class I>
 size_t hashValue(vector<T>& vs, I ib, I ie) {
   size_t a = 0;
-  toVector(vs, ib, ie);
-  sort(vs.begin(), vs.end());
+  write(vs, ib, ie); sort(vs);
   for (const T& v : vs)
     a ^= hash<T>{}(v) + 0x9e3779b9 + (a<<6) + (a>>2); // from boost::hash_combine
   return a;
