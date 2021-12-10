@@ -24,7 +24,7 @@ using std::max;
 // PAGERANK-CHAINS
 // ---------------
 
-template <class G, class H, class J, class T>
+template <class G, class H, class J>
 auto pagerankCudaChainsRootDist(const G& x, const H& xt, const J& ks, int SC) {
   int N = xt.order();
   vector<int> vroot(N), vdist(N);
@@ -301,8 +301,8 @@ T pagerankErrorReduce(const T *x, int N, int EF) {
 // --------
 // For Monolithic / Levelwise PageRank.
 
-template <class H, class J, class M, class FL, class T=float>
-PagerankResult<T> pagerankCuda(const H& xt, const J& ks, int i, const M& ns, FL fl, const vector<T> *q, const PagerankOptions<T>& o) {
+template <class G, class H, class J, class M, class FL, class T=float>
+PagerankResult<T> pagerankCuda(const G& x, const H& xt, const J& ks, int i, const M& ns, FL fl, const vector<T> *q, const PagerankOptions<T>& o) {
   int  N  = xt.order();
   T    p  = o.damping;
   T    E  = o.tolerance;
