@@ -185,7 +185,7 @@ __global__ void fillKernel(T *a, int N, T v) {
 
 
 template <class T>
-__host__ __device__ void fillCu(T *a, int N, T v) {
+void fillCu(T *a, int N, T v) {  // __host__ __device__
   const int B = BLOCK_DIM_M<T>();
   const int G = min(ceilDiv(N, B), GRID_DIM_M<T>());
   fillKernel<<<G, B>>>(a, N, v);

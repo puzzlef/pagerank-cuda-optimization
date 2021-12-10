@@ -22,7 +22,7 @@ using std::max;
 // -------------
 
 template <class T, class J>
-int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, int *sD, T *cD, const T *fD, const int *vfromD, const int *efromD, const int *vdataD, const int *vrootD, int i, const J& ns, int N, T p, T E, int L, int EF, int SC, int SA) {
+int pagerankMonolithicCudaLoop(T *e, T *r0, T *eD, T *r0D, T *&aD, T *&rD, int *sD, T *cD, const T *fD, const int *vfromD, const int *efromD, const int *vdataD, int i, const J& ns, int N, T p, T E, int L, int EF, int SC, int SA) {
   int n = sumAbs(ns);
   int R = reduceSizeCu<T>(n);
   size_t R1 = R * sizeof(T);
