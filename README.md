@@ -31,23 +31,43 @@ $ ...
 
 # ...
 #
-# Loading graph /home/subhajit/data/web-Stanford.mtx ...
-# order: 281903 size: 2312497 {}
-# order: 281903 size: 2312497 {} (transposeWithDegree)
-# [00011.339 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00011.281 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda
-# [00010.335 ms; 063 iters.] [7.0114e-07 err.] pagerankCuda [split]
-# [00010.381 ms; 063 iters.] [7.0093e-07 err.] pagerankCuda [split; sort]
-#
-# ...
-#
 # Loading graph /home/subhajit/data/soc-LiveJournal1.mtx ...
 # order: 4847571 size: 68993773 {}
 # order: 4847571 size: 68993773 {} (transposeWithDegree)
-# [00167.890 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
-# [00159.698 ms; 051 iters.] [3.1616e-06 err.] pagerankCuda
-# [00151.696 ms; 051 iters.] [3.0290e-06 err.] pagerankCuda [split]
-# [00151.516 ms; 051 iters.] [3.1139e-06 err.] pagerankCuda [split; sort]
+# [00167.675 ms; 000 iters.] [0.0000e+00 err.] pagerankNvgraph
+# [00158.358 ms; 051 iters.] [3.1615e-06 err.] pagerankCuda
+# [00352.375 ms; 051 iters.] [3.0248e-06 err.] pagerankCudaSplit [min-compute=1]
+# [00359.356 ms; 051 iters.] [3.0147e-06 err.] pagerankCudaSplit [min-compute=5]
+# [00369.774 ms; 051 iters.] [3.0311e-06 err.] pagerankCudaSplit [min-compute=10]
+# [00214.048 ms; 051 iters.] [3.0474e-06 err.] pagerankCudaSplit [min-compute=50]
+# [00192.967 ms; 051 iters.] [3.0905e-06 err.] pagerankCudaSplit [min-compute=100]
+# [00190.474 ms; 051 iters.] [3.0432e-06 err.] pagerankCudaSplit [min-compute=500]
+# [00184.505 ms; 051 iters.] [3.0680e-06 err.] pagerankCudaSplit [min-compute=1000]
+# [00165.933 ms; 051 iters.] [3.0745e-06 err.] pagerankCudaSplit [min-compute=5000]
+# [00164.883 ms; 051 iters.] [3.0696e-06 err.] pagerankCudaSplit [min-compute=10000]
+# [00155.632 ms; 051 iters.] [3.0847e-06 err.] pagerankCudaSplit [min-compute=50000]
+# [00152.888 ms; 051 iters.] [3.0732e-06 err.] pagerankCudaSplit [min-compute=100000]
+# [00152.084 ms; 051 iters.] [3.0786e-06 err.] pagerankCudaSplit [min-compute=500000]
+# [00151.485 ms; 051 iters.] [3.0290e-06 err.] pagerankCudaSplit [min-compute=1000000]
+# [00150.983 ms; 051 iters.] [3.1235e-06 err.] pagerankCudaSplit [min-compute=5000000]
+# [00150.956 ms; 051 iters.] [3.1235e-06 err.] pagerankCudaSplit [min-compute=10000000]
+# [00151.483 ms; 051 iters.] [3.1235e-06 err.] pagerankCudaSplit [min-compute=50000000]
+# [00353.937 ms; 051 iters.] [3.1245e-06 err.] pagerankCudaSplitSort [min-compute=1]
+# [00361.089 ms; 051 iters.] [3.1245e-06 err.] pagerankCudaSplitSort [min-compute=5]
+# [00369.366 ms; 051 iters.] [3.1128e-06 err.] pagerankCudaSplitSort [min-compute=10]
+# [00232.066 ms; 051 iters.] [3.1088e-06 err.] pagerankCudaSplitSort [min-compute=50]
+# [00208.907 ms; 051 iters.] [3.1771e-06 err.] pagerankCudaSplitSort [min-compute=100]
+# [00221.725 ms; 051 iters.] [3.1950e-06 err.] pagerankCudaSplitSort [min-compute=500]
+# [00204.021 ms; 051 iters.] [3.1739e-06 err.] pagerankCudaSplitSort [min-compute=1000]
+# [00175.499 ms; 051 iters.] [3.1493e-06 err.] pagerankCudaSplitSort [min-compute=5000]
+# [00169.683 ms; 051 iters.] [3.1197e-06 err.] pagerankCudaSplitSort [min-compute=10000]
+# [00158.064 ms; 051 iters.] [3.0843e-06 err.] pagerankCudaSplitSort [min-compute=50000]
+# [00154.033 ms; 051 iters.] [3.1045e-06 err.] pagerankCudaSplitSort [min-compute=100000]
+# [00151.808 ms; 051 iters.] [3.1468e-06 err.] pagerankCudaSplitSort [min-compute=500000]
+# [00151.590 ms; 051 iters.] [3.1139e-06 err.] pagerankCudaSplitSort [min-compute=1000000]
+# [00151.324 ms; 051 iters.] [3.0990e-06 err.] pagerankCudaSplitSort [min-compute=5000000]
+# [00151.403 ms; 051 iters.] [3.0990e-06 err.] pagerankCudaSplitSort [min-compute=10000000]
+# [00151.074 ms; 051 iters.] [3.0990e-06 err.] pagerankCudaSplitSort [min-compute=50000000]
 #
 # ...
 ```
