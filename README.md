@@ -113,6 +113,7 @@ $ ...
 <br>
 
 [![](https://i.imgur.com/TSKFNzd.png)](https://www.youtube.com/watch?v=eVvonVlbcFg)
+[![DOI](https://zenodo.org/badge/381743698.svg)](https://zenodo.org/badge/latestdoi/381743698)
 
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
 [Prof. Kishore Kothapalli]: https://www.iiit.ac.in/people/faculty/kkishore/
